@@ -1,59 +1,50 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Linkedin, Youtube, MessageCircle } from "lucide-react";
+import { Linkedin, Instagram, Facebook } from "lucide-react";
 
 export default function Footer() {
   return (
     <footer className="bg-noite text-branco/60 border-t border-branco/10">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10 py-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10 py-14 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
         <Image
           src="/images/logo-branca.png"
           alt="Trilho Consultoria"
-          width={200}
-          height={100}
-          className="h-12 w-auto"
+          width={280}
+          height={140}
+          className="h-16 w-auto"
         />
 
-        <div className="flex flex-wrap items-center gap-5">
+        <div className="flex flex-wrap items-center gap-7">
           <a
-            href="https://www.linkedin.com/in/alexandre-faleiros"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="LinkedIn Alexandre Faleiros"
+            aria-label="Facebook"
             className="hover:text-dourado-claro transition-colors"
           >
-            <Linkedin size={22} />
+            <Facebook size={32} />
           </a>
           <a
-            href="https://www.linkedin.com/in/will-sales"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="LinkedIn William Sales"
+            aria-label="Instagram"
             className="hover:text-dourado-claro transition-colors"
           >
-            <Linkedin size={22} />
+            <Instagram size={32} />
           </a>
           <a
-            href="https://www.youtube.com/@trilhoconsultoria"
+            href="https://www.linkedin.com/company/trilhoconsultoria"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="YouTube"
+            aria-label="LinkedIn"
             className="hover:text-dourado-claro transition-colors"
           >
-            <Youtube size={22} />
-          </a>
-          <a
-            href="https://wa.me/5534991270137"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp"
-            className="hover:text-dourado-claro transition-colors"
-          >
-            <MessageCircle size={22} />
+            <Linkedin size={32} />
           </a>
           <Link
             href="/area-cliente"
-            className="text-sm border border-branco/20 rounded-full px-4 py-2 hover:border-dourado-claro hover:text-dourado-claro transition-colors"
+            className="text-sm border border-branco/20 rounded-full px-5 py-2.5 hover:border-dourado-claro hover:text-dourado-claro transition-colors"
           >
             Área do Cliente
           </Link>

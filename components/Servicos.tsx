@@ -1,65 +1,171 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Users, GraduationCap, BarChart3, ChevronLeft, ChevronRight } from "lucide-react";
 
 const SERVICOS = [
   {
+    icon: Users,
     titulo: "Recrutamento & Seleção",
-    texto:
-      "Processos seletivos completos, do mapeamento do perfil ideal à integração do profissional aprovado.",
+    descricao:
+      "Processos seletivos completos, do alinhamento de perfil ideal à integração do profissional aprovado. Conheça nossas soluções para R&S:",
+    subservicos: [
+      "Trilho Talent — Posições técnicas, operacionais e administrativas até nível Sênior",
+      "Trilho Strategy — Atração e seleção para posições de gerência, especialistas e coordenação",
+      "Trilho Executive — Posições estratégicas C-Level, Vice-Presidência e Diretoria",
+    ],
+    imagem: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=80",
   },
   {
-    titulo: "Hunting Executivo",
-    texto:
-      "Busca ativa de lideranças e especialistas para posições estratégicas, com abordagem direta e discreta.",
+    icon: GraduationCap,
+    titulo: "Treinamentos & Conteúdo Especializado",
+    descricao:
+      "Desenvolvemos programas de capacitação corporativa personalizados, presenciais e online, alinhados aos desafios e objetivos reais de cada equipe. Produzimos conteúdos estratégicos em diversos formatos — treinamentos, workshops, podcasts, vídeos e materiais técnicos — que aceleram o desenvolvimento profissional e fortalecem a tomada de decisão.",
+    subservicos: [],
+    imagem: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=900&q=80",
   },
   {
-    titulo: "Treinamentos",
-    texto:
-      "Capacitação corporativa online e presencial, desenvolvida para as demandas reais de cada equipe.",
-  },
-  {
+    icon: BarChart3,
     titulo: "Consultoria",
-    texto:
-      "Apoio estratégico em gestão de pessoas, estruturação de processos seletivos e diagnóstico de RH.",
+    descricao:
+      "Transformamos desafios em oportunidades por meio de soluções estratégicas para empresas e profissionais. Atuamos no fortalecimento da gestão de pessoas, diagnóstico organizacional e estruturação de processos seletivos mais eficientes.",
+    subservicos: [
+      "Consultoria especializada em posicionamento de carreira",
+      "Otimização de LinkedIn e currículo",
+      "Diagnóstico organizacional e estruturação de processos",
+    ],
+    imagem: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&q=80",
   },
 ];
 
 export default function Servicos() {
+  const [ativo, setAtivo] = useState(0);
+
+  // Aumentado para 9 segundos para dar tempo de ler
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setAtivo((prev) => (prev + 1) % SERVICOS.length);
+    }, 9000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const anterior = () => setAtivo((prev) => (prev - 1 + SERVICOS.length) % SERVICOS.length);
+  const proximo  = () => setAtivo((prev) => (prev + 1) % SERVICOS.length);
+
+  const s = SERVICOS[ativo];
+
   return (
     <section id="servicos" className="bg-noite text-branco py-28 lg:py-36">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6 }}
-          className="max-w-2xl mb-16"
-        >
-          <span className="text-dourado-claro text-sm tracking-[0.2em] uppercase">
-            Serviços
-          </span>
-          <h2 className="font-display font-medium text-3xl sm:text-4xl mt-4 leading-tight">
-            Soluções completas em gestão de talentos.
-          </h2>
-        </motion.div>
 
-        <div className="grid sm:grid-cols-2 gap-x-10">
-          {SERVICOS.map((s, i) => (
-            <motion.div
-              key={s.titulo}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="py-9 border-t border-branco/15 first:border-t-0 sm:first:border-t sm:nth-[2]:border-t-0"
+        {/* Label */}
+        <span className="text-dourado-claro text-sm tracking-[0.2em] uppercase font-bold mb-6 block">
+          Serviços
+        </span>
+
+        {/* Tabs */}
+        <div className="flex gap-2 mb-12 flex-wrap">
+          {SERVICOS.map((sv, i) => (
+            <button
+              key={sv.titulo}
+              onClick={() => setAtivo(i)}
+              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
+                i === ativo
+                  ? "bg-dourado-claro text-noite"
+                  : "border border-branco/30 text-branco/60 hover:border-dourado-claro hover:text-dourado-claro"
+              }`}
             >
-              <h3 className="font-display text-xl sm:text-2xl font-medium mb-3">
-                {s.titulo}
-              </h3>
-              <p className="text-branco/65 leading-relaxed">{s.texto}</p>
-            </motion.div>
+              {sv.titulo}
+            </button>
           ))}
+        </div>
+
+        {/* Conteúdo: texto esquerda + imagem direita */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={ativo}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+            className="grid lg:grid-cols-2 gap-12 items-center"
+          >
+            {/* Texto */}
+            <div className="flex flex-col gap-6">
+              <div className="flex items-center gap-4">
+                <div className="w-14 h-14 rounded-full bg-dourado flex items-center justify-center shrink-0">
+                  <s.icon size={28} strokeWidth={1.5} color="#FFFFFF" />
+                </div>
+                <h2 className="font-display font-medium text-3xl sm:text-4xl leading-tight">
+                  {s.titulo}
+                </h2>
+              </div>
+
+              <p className="text-branco/80 text-lg leading-relaxed">
+                {s.descricao}
+              </p>
+
+              {s.subservicos.length > 0 && (
+                <ul className="flex flex-col gap-3">
+                  {s.subservicos.map((sub, i) => (
+                    <li key={i} className="flex items-start gap-3 text-branco/70 text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-dourado-claro mt-2 shrink-0" />
+                      {sub}
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              <a
+                href="#contato"
+                className="self-start mt-2 bg-dourado-claro text-noite font-bold px-7 py-3.5 rounded-full hover:bg-dourado transition-colors uppercase tracking-wide text-sm"
+              >
+                Fale com a Trilho
+              </a>
+            </div>
+
+            {/* Imagem direita */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="rounded-2xl overflow-hidden h-[400px] lg:h-[480px]"
+            >
+              <img
+                src={s.imagem}
+                alt={s.titulo}
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Navegação */}
+        <div className="flex items-center gap-4 mt-12">
+          <button
+            onClick={anterior}
+            className="w-10 h-10 rounded-full border border-branco/30 flex items-center justify-center hover:border-dourado-claro hover:text-dourado-claro transition-colors"
+          >
+            <ChevronLeft size={20} />
+          </button>
+          <div className="flex gap-2">
+            {SERVICOS.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setAtivo(i)}
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  i === ativo ? "w-8 bg-dourado-claro" : "w-3 bg-branco/30"
+                }`}
+              />
+            ))}
+          </div>
+          <button
+            onClick={proximo}
+            className="w-10 h-10 rounded-full border border-branco/30 flex items-center justify-center hover:border-dourado-claro hover:text-dourado-claro transition-colors"
+          >
+            <ChevronRight size={20} />
+          </button>
         </div>
       </div>
     </section>

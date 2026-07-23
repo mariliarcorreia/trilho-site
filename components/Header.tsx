@@ -6,12 +6,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
-  { label: "Quem Somos", href: "#quem-somos" },
-  { label: "Serviços", href: "#servicos" },
-  { label: "Diferenciais", href: "#diferenciais" },
-  { label: "Equipe", href: "#equipe" },
-  { label: "Clientes", href: "#clientes" },
-  { label: "Contato", href: "#contato" },
+  { label: "QUEM SOMOS", href: "#quem-somos" },
+  { label: "SERVIÇOS", href: "#servicos" },
+  { label: "DIFERENCIAIS", href: "#diferenciais" },
+  { label: "EQUIPE", href: "#equipe" },
+  { label: "CLIENTES", href: "#clientes" },
+  { label: "CONTATO", href: "#contato" },
 ];
 
 const VAGAS_URL = "#";
@@ -21,24 +21,24 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-noite">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10 flex items-center justify-between h-20">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10 flex items-center justify-between h-24">
         <a href="#topo" className="flex items-center shrink-0">
           <Image
             src="/images/logo-branca.png"
             alt="Trilho Consultoria"
-            width={220}
-            height={110}
-            className="h-12 w-auto"
+            width={280}
+            height={140}
+            className="h-16 w-auto"
             priority
           />
         </a>
 
-        <nav className="hidden lg:flex items-center gap-9">
+        <nav className="hidden lg:flex items-center gap-8">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-branco/80 hover:text-dourado-claro transition-colors"
+              className="text-sm font-medium text-branco/80 hover:text-dourado-claro transition-colors tracking-wide"
             >
               {link.label}
             </a>
@@ -50,7 +50,7 @@ export default function Header() {
             href="/area-cliente"
             className="text-sm text-branco/70 hover:text-dourado-claro transition-colors"
           >
-            Área do Cliente
+            ÁREA DO CLIENTE
           </a>
           <a
             href={VAGAS_URL}
@@ -58,7 +58,7 @@ export default function Header() {
             rel="noopener noreferrer"
             className="text-sm font-medium text-noite bg-dourado-claro hover:bg-dourado px-5 py-2.5 rounded-full transition-colors"
           >
-            Vagas abertas
+            VAGAS ABERTAS
           </a>
         </div>
 
@@ -67,7 +67,7 @@ export default function Header() {
           className="lg:hidden text-branco p-2"
           aria-label="Abrir menu"
         >
-          <Menu size={26} />
+          <Menu size={28} />
         </button>
       </div>
 
@@ -79,20 +79,20 @@ export default function Header() {
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 bg-noite lg:hidden"
           >
-            <div className="flex items-center justify-between h-20 px-6">
+            <div className="flex items-center justify-between h-24 px-6">
               <Image
                 src="/images/logo-branca.png"
                 alt="Trilho Consultoria"
-                width={180}
-                height={90}
-                className="h-10 w-auto"
+                width={240}
+                height={120}
+                className="h-14 w-auto"
               />
               <button
                 onClick={() => setMenuOpen(false)}
                 className="text-branco p-2"
                 aria-label="Fechar menu"
               >
-                <X size={26} />
+                <X size={28} />
               </button>
             </div>
             <nav className="flex flex-col px-8 pt-6 gap-1">
@@ -117,7 +117,7 @@ export default function Header() {
                 transition={{ delay: 0.05 * NAV_LINKS.length }}
                 className="mt-6 text-center text-noite font-medium bg-dourado-claro px-5 py-3 rounded-full"
               >
-                Vagas abertas
+                VAGAS ABERTAS
               </motion.a>
             </nav>
           </motion.div>

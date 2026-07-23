@@ -7,35 +7,40 @@ import { Linkedin } from "lucide-react";
 const SOCIOS = [
   {
     nome: "Alexandre Faleiros",
+    cargo: "Diretor de Talent & Sócio",
     linkedin: "https://www.linkedin.com/in/alexandre-faleiros",
-    bio: "Mais de 10 anos de experiência em Recursos Humanos, com atuação em recrutamento estratégico, atração e seleção de talentos, employer branding, programas de estágio e trainee, além de iniciativas voltadas à Diversidade, Equidade e Inclusão. Sua trajetória é marcada pela construção de processos seletivos humanizados, estratégicos e alinhados às necessidades do negócio.",
+    bio: "Administrador de Empresas pela Universidade Federal de Uberlândia (UFU), pós-graduado pela Fundação Getulio Vargas (FGV), especialista em Talent Acquisition e Gestão Estratégica de Pessoas. Possui mais de 10 anos de experiência em Recursos Humanos, atuando em empresas nacionais e multinacionais, com forte atuação em recrutamento estratégico para posições operacionais, técnicas, especialistas, liderança e executivos. Ao longo de sua carreira, liderou projetos de Employer Branding, Programas de Estágio e Trainee, atração de talentos, hunting, People Analytics e iniciativas de Diversidade, Equidade e Inclusão, sempre conectando pessoas às necessidades estratégicas do negócio. É certificado nas metodologias comportamentais Predictive Index (PI) e PDA International, agregando maior precisão às avaliações de perfil e aos processos seletivos.",
   },
   {
     nome: "William Sales",
+    cargo: "Sócio & Diretor Executivo",
     linkedin: "https://www.linkedin.com/in/will-sales",
-    bio: "Sólida carreira de mais de 20 anos como executivo e administrador, reunindo ampla experiência em gestão, desenvolvimento de negócios, estratégia, transformação organizacional e liderança de equipes. Sua visão de negócios contribui para conectar pessoas, resultados e crescimento sustentável.",
+    bio: "Administrador, pós-graduado pela Fundação Getulio Vargas (FGV), executivo com mais de 20 anos de experiência em gestão empresarial, desenvolvimento de negócios e liderança de equipes. Construiu sua carreira em empresas de grande porte, liderando operações, projetos de transformação organizacional, estratégia corporativa e desenvolvimento de pessoas. Sua atuação combina visão de negócios, capacidade analítica e foco em resultados sustentáveis, contribuindo para a estruturação de processos, crescimento organizacional e fortalecimento da cultura empresarial. Possui experiência na condução de equipes multidisciplinares e relacionamento com diferentes níveis de gestão, agregando uma visão executiva que complementa a atuação consultiva da Trilho.",
   },
 ];
 
 export default function Equipe() {
   return (
-    <section id="equipe" className="bg-branco py-28 lg:py-36">
+    <section id="equipe" className="bg-pedra py-28 lg:py-36">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6 }}
-          className="max-w-2xl mb-16"
+          className="mb-16"
         >
-          <span className="text-dourado text-sm tracking-[0.2em] uppercase">
-            Equipe
+          <span className="text-dourado text-sm tracking-[0.2em] uppercase font-bold">
+            Nossa Equipe
           </span>
-          <h2 className="font-display font-medium text-3xl sm:text-4xl mt-4 leading-tight">
-            Dois sócios. Diferentes trajetórias. Um mesmo propósito.
+          <h2 className="font-display font-medium text-3xl sm:text-5xl mt-4 leading-tight">
+            Dois sócios.{" "}
+            <span className="text-dourado">Diferentes trajetórias.</span>{" "}
+            Um mesmo propósito.
           </h2>
-          <p className="mt-4 text-grafite leading-relaxed">
-            Conectar talentos e empresas com excelência.
+          <p className="mt-6 text-grafite text-lg leading-relaxed max-w-3xl">
+            A Trilho Consultoria foi fundada por profissionais com sólida trajetória em Recursos Humanos, Estratégia e Gestão Empresarial, reunindo experiência em empresas nacionais e multinacionais dos segmentos de Agronegócio, Indústria e Celulose.
           </p>
         </motion.div>
 
@@ -45,27 +50,33 @@ export default function Equipe() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.6 }}
-          className="w-full rounded-2xl overflow-hidden mb-10"
+          className="w-full rounded-2xl overflow-hidden mb-12 relative"
         >
           <Image
-            src="/images/equipe.PNG"
-            alt="Alexandre Faleiros e William Sales — Sócios da Trilho Consultoria"
+            src="/images/equipe.png"
+            alt="Alexandre Faleiros e William Sales"
             width={1456}
             height={816}
             className="w-full object-cover object-top max-h-[520px]"
           />
+          <div className="absolute bottom-0 left-0 right-0 h-1 bg-dourado" />
         </motion.div>
 
-        {/* Texto introdutório */}
-        <motion.p
+        {/* Citação */}
+        <motion.blockquote
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.5 }}
-          className="text-grafite text-base leading-relaxed max-w-3xl mb-14"
+          className="border-l-4 border-dourado pl-6 mb-14 max-w-3xl"
         >
-          É com muita satisfação que apresentamos os sócios da Trilho Consultoria, especializada em Recrutamento & Seleção para os segmentos de Agronegócio, Indústria e Celulose. Com ampla experiência em mercados nacionais e multinacionais, unem suas expertises para inovação, performance e resultado.
-        </motion.p>
+          <p className="text-grafite text-base italic leading-relaxed">
+            "Mais do que conduzir processos seletivos, desenvolvemos carreiras liderando projetos estratégicos, formando equipes de alta performance e apoiando organizações na construção de resultados sustentáveis por meio da gestão e recrutamento de pessoas. Essa vivência prática permite oferecer soluções consultivas com visão de negócio, credibilidade e profundo conhecimento do mercado."
+          </p>
+          <footer className="mt-3 text-dourado font-medium text-sm">
+            — Alexandre Faleiros, Diretor de Talent & Sócio
+          </footer>
+        </motion.blockquote>
 
         {/* Cards individuais */}
         <div className="grid sm:grid-cols-2 gap-8">
@@ -76,20 +87,24 @@ export default function Equipe() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: i * 0.12 }}
-              className="bg-pedra rounded-2xl p-8 flex flex-col gap-4 border border-linha"
+              className="bg-branco rounded-2xl p-8 flex flex-col gap-4 border border-linha shadow-sm"
             >
-              <div className="flex items-center justify-between">
-                <h3 className="font-display text-xl font-medium">{s.nome}</h3>
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <h3 className="font-display text-xl font-medium text-noite">{s.nome}</h3>
+                  <p className="text-dourado text-sm font-medium mt-1">{s.cargo}</p>
+                </div>
                 <a
                   href={s.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`LinkedIn de ${s.nome}`}
-                  className="text-dourado hover:text-dourado-claro transition-colors"
+                  className="text-dourado hover:text-dourado-claro transition-colors shrink-0 mt-1"
                 >
-                  <Linkedin size={20} />
+                  <Linkedin size={22} />
                 </a>
               </div>
+              <div className="h-px bg-linha" />
               <p className="text-grafite text-sm leading-relaxed">{s.bio}</p>
             </motion.div>
           ))}
