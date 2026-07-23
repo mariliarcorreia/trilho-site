@@ -7,31 +7,33 @@ const PILARES = [
   {
     icon: Target,
     titulo: "Missão",
-    texto:
-      "Proporcionar os melhores talentos e soluções para que as empresas atinjam seus objetivos e gerenciem seus negócios e recursos, além de buscar as melhores oportunidades para os profissionais que procuram um novo desafio em suas carreiras.",
+    texto: "Proporcionar os melhores talentos e soluções para que as empresas atinjam seus objetivos e gerenciem seus negócios e recursos, além de buscar as melhores oportunidades para os profissionais que procuram um novo desafio em suas carreiras.",
     bg: "#0D0D0D",
     iconBg: "#9A7B3A",
     iconColor: "#0D0D0D",
     textColor: "#FFFFFF",
+    lista: false,
   },
   {
     icon: Eye,
     titulo: "Visão",
-    texto:
-      "Ser referência no mercado de Recrutamento & Seleção em agronegócio, indústria e no segmento de papel e celulose.",
+    texto: "Ser referência no mercado de Recrutamento & Seleção em agronegócio, indústria e no segmento de papel e celulose.",
     bg: "#9A7B3A",
     iconBg: "#0D0D0D",
     iconColor: "#C9A86A",
     textColor: "#FFFFFF",
+    lista: false,
   },
   {
     icon: Gem,
     titulo: "Valores",
-    texto: "Integridade · Respeito · Qualidade · Conexão · Resultado",
+    texto: "",
+    valores: ["Integridade", "Respeito", "Qualidade", "Conexão", "Resultado"],
     bg: "#F5F3EE",
     iconBg: "#9A7B3A",
     iconColor: "#FFFFFF",
     textColor: "#0D0D0D",
+    lista: true,
   },
 ];
 
@@ -54,7 +56,6 @@ export default function Pilares() {
           </h2>
         </motion.div>
 
-        {/* Força 3 colunas sempre no desktop */}
         <div className="grid grid-cols-1 sm:grid-cols-3 rounded-2xl overflow-hidden shadow-xl">
           {PILARES.map((p, i) => (
             <motion.div
@@ -83,14 +84,21 @@ export default function Pilares() {
                 {p.titulo}
               </h3>
 
-              <div
-                style={{ backgroundColor: p.iconBg }}
-                className="w-14 h-[3px] rounded-full"
-              />
+              <div style={{ backgroundColor: p.iconBg }} className="w-14 h-[3px] rounded-full" />
 
-              <p style={{ color: p.textColor }} className="text-sm leading-relaxed opacity-85">
-                {p.texto}
-              </p>
+              {p.lista && p.valores ? (
+                <ul className="flex flex-col gap-2">
+                  {p.valores.map((v) => (
+                    <li key={v} style={{ color: p.textColor }} className="text-base font-medium">
+                      {v}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p style={{ color: p.textColor }} className="text-sm leading-relaxed opacity-85">
+                  {p.texto}
+                </p>
+              )}
             </motion.div>
           ))}
         </div>

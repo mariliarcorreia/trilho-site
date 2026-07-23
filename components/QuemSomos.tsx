@@ -6,7 +6,6 @@ export default function QuemSomos() {
   return (
     <section id="quem-somos" className="bg-branco py-28 lg:py-36">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -17,14 +16,14 @@ export default function QuemSomos() {
           <span className="text-dourado text-sm tracking-[0.2em] uppercase font-bold">
             Quem Somos
           </span>
-          <h2 className="font-display font-medium text-4xl sm:text-5xl lg:text-6xl mt-4 leading-tight max-w-3xl">
+          {/* Título 3x maior com destaque */}
+          <h2 className="font-display font-medium text-6xl sm:text-7xl lg:text-[6rem] mt-4 leading-[1] max-w-4xl">
             Especialistas em conectar{" "}
             <span className="text-dourado">pessoas certas</span> a desafios certos.
           </h2>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-          {/* Imagem */}
           <motion.div
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -39,7 +38,6 @@ export default function QuemSomos() {
             />
           </motion.div>
 
-          {/* Texto */}
           <motion.div
             initial={{ opacity: 0, x: 24 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -50,19 +48,15 @@ export default function QuemSomos() {
             <p className="font-bold text-noite text-lg">
               A Trilho Consultoria nasceu da união de profissionais com sólida experiência em Recursos Humanos, Gestão de Negócios e Desenvolvimento Organizacional.
             </p>
-
             <p>
               Nosso propósito é conectar pessoas e empresas por meio de soluções personalizadas que apoiam a atração, seleção, desenvolvimento e retenção de talentos. Trabalhamos para fortalecer organizações, formar equipes de alta performance e contribuir para ambientes mais inclusivos, inovadores e preparados para os desafios do futuro.
             </p>
-
             <p className="font-bold text-noite">
               Contamos com uma equipe de recrutadores especializados em diferentes mercados, com forte atuação nos setores de agronegócio, indústria e celulose.
             </p>
-
             <p>
               Na Trilho Consultoria, acreditamos que cada empresa possui uma história, uma cultura e desafios únicos. Por isso, combinamos inteligência de mercado, metodologia, tecnologia e uma abordagem genuinamente humana para construir soluções que geram resultados sustentáveis.
             </p>
-
             <p className="font-medium text-noite">
               Mais do que uma consultoria de Recrutamento e Seleção, somos parceiros estratégicos na construção de caminhos que impulsionam pessoas, fortalecem organizações e transformam o futuro dos negócios.
             </p>

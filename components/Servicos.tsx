@@ -2,38 +2,37 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Users, GraduationCap, BarChart3, ChevronLeft, ChevronRight } from "lucide-react";
+import { Users, GraduationCap, BarChart3, ChevronLeft, ChevronRight, Star } from "lucide-react";
 
 const SERVICOS = [
   {
     icon: Users,
     titulo: "Recrutamento & Seleção",
-    descricao:
-      "Processos seletivos completos, do alinhamento de perfil ideal à integração do profissional aprovado. Conheça nossas soluções para R&S:",
+    descricao: "Processos seletivos completos, do alinhamento de perfil ideal à integração do profissional aprovado. Conheça nossas soluções para R&S:",
     subservicos: [
-      "Trilho Talent — Posições técnicas, operacionais e administrativas até nível Sênior",
-      "Trilho Strategy — Atração e seleção para posições de gerência, especialistas e coordenação",
-      "Trilho Executive — Posições estratégicas C-Level, Vice-Presidência e Diretoria",
+      { icone: "🌱", texto: "Trilho Estágio — Recrutamento especializado para programas de estágio, com processos personalizados à cultura, aos desafios e ao perfil de talento que cada empresa busca. Da atração à seleção, encontramos jovens com potencial para crescer junto com o seu negócio." },
+      { icone: "⭐", texto: "Trilho Talent — Posições técnicas, operacionais e administrativas até nível Sênior" },
+      { icone: "⭐", texto: "Trilho Strategy — Atração e seleção para posições de gerência, especialistas e coordenação" },
+      { icone: "⭐", texto: "Trilho Executive — Posições estratégicas C-Level, Vice-Presidência e Diretoria" },
     ],
     imagem: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=80",
   },
   {
     icon: GraduationCap,
     titulo: "Treinamentos & Conteúdo Especializado",
-    descricao:
-      "Desenvolvemos programas de capacitação corporativa personalizados, presenciais e online, alinhados aos desafios e objetivos reais de cada equipe. Produzimos conteúdos estratégicos em diversos formatos — treinamentos, workshops, podcasts, vídeos e materiais técnicos — que aceleram o desenvolvimento profissional e fortalecem a tomada de decisão.",
+    descricao: "Desenvolvemos programas de capacitação corporativa personalizados, presenciais e online, alinhados aos desafios e objetivos reais de cada equipe. Produzimos conteúdos estratégicos em diversos formatos — treinamentos, workshops, podcasts, vídeos e materiais técnicos — que aceleram o desenvolvimento profissional e fortalecem a tomada de decisão.",
     subservicos: [],
     imagem: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=900&q=80",
   },
   {
     icon: BarChart3,
     titulo: "Consultoria",
-    descricao:
-      "Transformamos desafios em oportunidades por meio de soluções estratégicas para empresas e profissionais. Atuamos no fortalecimento da gestão de pessoas, diagnóstico organizacional e estruturação de processos seletivos mais eficientes.",
+    descricao: "Consultoria de Carreira para profissionais que desejam se destacar no mercado e aumentar suas chances de aprovação em processos seletivos.",
     subservicos: [
-      "Consultoria especializada em posicionamento de carreira",
-      "Otimização de LinkedIn e currículo",
-      "Diagnóstico organizacional e estruturação de processos",
+      { icone: "⭐", texto: "LinkedIn e currículo estratégicos" },
+      { icone: "⭐", texto: "Posicionamento e marca profissional" },
+      { icone: "⭐", texto: "Preparação para entrevistas e processos seletivos" },
+      { icone: "⭐", texto: "Planejamento de carreira e transição profissional" },
     ],
     imagem: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&q=80",
   },
@@ -42,7 +41,6 @@ const SERVICOS = [
 export default function Servicos() {
   const [ativo, setAtivo] = useState(0);
 
-  // Aumentado para 9 segundos para dar tempo de ler
   useEffect(() => {
     const timer = setInterval(() => {
       setAtivo((prev) => (prev + 1) % SERVICOS.length);
@@ -52,28 +50,25 @@ export default function Servicos() {
 
   const anterior = () => setAtivo((prev) => (prev - 1 + SERVICOS.length) % SERVICOS.length);
   const proximo  = () => setAtivo((prev) => (prev + 1) % SERVICOS.length);
-
   const s = SERVICOS[ativo];
 
   return (
     <section id="servicos" className="bg-noite text-branco py-28 lg:py-36">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-
-        {/* Label */}
-        <span className="text-dourado-claro text-sm tracking-[0.2em] uppercase font-bold mb-6 block">
+        <span className="text-dourado-claro text-sm tracking-[0.2em] uppercase font-bold mb-8 block">
           Serviços
         </span>
 
-        {/* Tabs */}
-        <div className="flex gap-2 mb-12 flex-wrap">
+        {/* Tabs maiores */}
+        <div className="flex gap-3 mb-12 flex-wrap">
           {SERVICOS.map((sv, i) => (
             <button
               key={sv.titulo}
               onClick={() => setAtivo(i)}
-              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
+              className={`px-7 py-3.5 rounded-full text-base font-semibold transition-all duration-300 ${
                 i === ativo
-                  ? "bg-dourado-claro text-noite"
-                  : "border border-branco/30 text-branco/60 hover:border-dourado-claro hover:text-dourado-claro"
+                  ? "bg-dourado-claro text-noite scale-105"
+                  : "border-2 border-branco/30 text-branco/70 hover:border-dourado-claro hover:text-dourado-claro"
               }`}
             >
               {sv.titulo}
@@ -81,7 +76,6 @@ export default function Servicos() {
           ))}
         </div>
 
-        {/* Conteúdo: texto esquerda + imagem direita */}
         <AnimatePresence mode="wait">
           <motion.div
             key={ativo}
@@ -102,16 +96,14 @@ export default function Servicos() {
                 </h2>
               </div>
 
-              <p className="text-branco/80 text-lg leading-relaxed">
-                {s.descricao}
-              </p>
+              <p className="text-branco/80 text-lg leading-relaxed">{s.descricao}</p>
 
               {s.subservicos.length > 0 && (
-                <ul className="flex flex-col gap-3">
+                <ul className="flex flex-col gap-4">
                   {s.subservicos.map((sub, i) => (
-                    <li key={i} className="flex items-start gap-3 text-branco/70 text-sm">
-                      <span className="w-1.5 h-1.5 rounded-full bg-dourado-claro mt-2 shrink-0" />
-                      {sub}
+                    <li key={i} className="flex items-start gap-3 text-branco/80 text-sm leading-relaxed">
+                      <span className="text-dourado-claro text-base shrink-0 mt-0.5">{sub.icone}</span>
+                      {sub.texto}
                     </li>
                   ))}
                 </ul>
@@ -125,45 +117,31 @@ export default function Servicos() {
               </a>
             </div>
 
-            {/* Imagem direita */}
+            {/* Imagem */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               className="rounded-2xl overflow-hidden h-[400px] lg:h-[480px]"
             >
-              <img
-                src={s.imagem}
-                alt={s.titulo}
-                className="w-full h-full object-cover"
-              />
+              <img src={s.imagem} alt={s.titulo} className="w-full h-full object-cover" />
             </motion.div>
           </motion.div>
         </AnimatePresence>
 
         {/* Navegação */}
         <div className="flex items-center gap-4 mt-12">
-          <button
-            onClick={anterior}
-            className="w-10 h-10 rounded-full border border-branco/30 flex items-center justify-center hover:border-dourado-claro hover:text-dourado-claro transition-colors"
-          >
+          <button onClick={anterior} className="w-10 h-10 rounded-full border border-branco/30 flex items-center justify-center hover:border-dourado-claro hover:text-dourado-claro transition-colors">
             <ChevronLeft size={20} />
           </button>
           <div className="flex gap-2">
             {SERVICOS.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setAtivo(i)}
-                className={`h-1.5 rounded-full transition-all duration-300 ${
-                  i === ativo ? "w-8 bg-dourado-claro" : "w-3 bg-branco/30"
-                }`}
+              <button key={i} onClick={() => setAtivo(i)}
+                className={`h-1.5 rounded-full transition-all duration-300 ${i === ativo ? "w-8 bg-dourado-claro" : "w-3 bg-branco/30"}`}
               />
             ))}
           </div>
-          <button
-            onClick={proximo}
-            className="w-10 h-10 rounded-full border border-branco/30 flex items-center justify-center hover:border-dourado-claro hover:text-dourado-claro transition-colors"
-          >
+          <button onClick={proximo} className="w-10 h-10 rounded-full border border-branco/30 flex items-center justify-center hover:border-dourado-claro hover:text-dourado-claro transition-colors">
             <ChevronRight size={20} />
           </button>
         </div>

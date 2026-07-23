@@ -23,10 +23,27 @@ export default function Hero() {
       </div>
 
       <div className="relative mx-auto max-w-7xl w-full px-6 lg:px-10 pt-36 pb-24">
+        {/* Logo grande no hero */}
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mb-10"
+        >
+          <Image
+            src="/images/logo-branca.png"
+            alt="Trilho Consultoria"
+            width={400}
+            height={200}
+            className="h-24 w-auto"
+            priority
+          />
+        </motion.div>
+
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
           className="text-dourado-claro text-base tracking-[0.2em] uppercase mb-6 font-bold"
         >
           Recrutamento & Seleção · Agronegócio & Indústria
@@ -35,7 +52,7 @@ export default function Hero() {
         <motion.h1
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.1 }}
+          transition={{ duration: 0.7, delay: 0.15 }}
           className="font-display font-medium text-[2.6rem] leading-[1.08] sm:text-6xl lg:text-7xl max-w-4xl"
         >
           O caminho certo entre talentos e oportunidades.
@@ -44,46 +61,23 @@ export default function Hero() {
         <motion.p
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.22 }}
+          transition={{ duration: 0.7, delay: 0.25 }}
           className="mt-7 text-branco/80 text-lg max-w-xl leading-relaxed"
         >
-          Consultoria especializada em recrutamento, seleção e hunting
-          executivo para empresas do agronegócio e indústria.
+          Consultoria especializada em recrutamento e seleção, treinamentos e conteúdos estratégicos para empresas do agronegócio e da indústria.
         </motion.p>
 
-        {/* Botões principais */}
+        {/* Três seções de CTA */}
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.34 }}
-          className="mt-10 flex flex-wrap gap-4"
+          transition={{ duration: 0.7, delay: 0.35 }}
+          className="mt-14 pt-10 border-t border-branco/10 grid sm:grid-cols-3 gap-8 max-w-4xl"
         >
-          <a
-            href={VAGAS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-dourado-claro text-noite font-bold px-8 py-4 rounded-full hover:bg-dourado transition-colors text-base uppercase tracking-wide"
-          >
-            Ver vagas abertas
-          </a>
-          <a
-            href="#contato"
-            className="border-2 border-dourado-claro text-branco font-bold px-8 py-4 rounded-full hover:bg-dourado-claro hover:text-noite transition-colors text-base uppercase tracking-wide"
-          >
-            Fale com a Trilho
-          </a>
-        </motion.div>
-
-        {/* Separador com dois públicos — agora também com botões */}
-        <motion.div
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.46 }}
-          className="mt-16 pt-10 border-t border-branco/10 grid sm:grid-cols-2 gap-6 max-w-2xl"
-        >
+          {/* Para Empresas */}
           <div className="flex flex-col gap-3">
             <p className="text-dourado-claro text-xs tracking-[0.18em] uppercase font-bold">
-              Para empresas
+              Para Empresas
             </p>
             <p className="text-branco/60 text-sm leading-relaxed">
               Encontre o profissional certo para cada posição do seu negócio.
@@ -92,12 +86,14 @@ export default function Hero() {
               href="#contato"
               className="self-start bg-dourado-claro text-noite font-bold px-6 py-3 rounded-full hover:bg-dourado transition-colors text-sm uppercase tracking-wide"
             >
-              Solicitar Consultoria
+              Fale com a Trilho
             </a>
           </div>
+
+          {/* Para Candidatos */}
           <div className="flex flex-col gap-3">
             <p className="text-dourado-claro text-xs tracking-[0.18em] uppercase font-bold">
-              Para candidatos
+              Para Candidatos
             </p>
             <p className="text-branco/60 text-sm leading-relaxed">
               Acesse as vagas disponíveis e candidate-se à sua próxima oportunidade.
@@ -106,9 +102,25 @@ export default function Hero() {
               href={VAGAS_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="self-start border-2 border-dourado-claro text-branco font-bold px-6 py-3 rounded-full hover:bg-dourado-claro hover:text-noite transition-colors text-sm uppercase tracking-wide"
+              className="self-start bg-dourado-claro text-noite font-bold px-6 py-3 rounded-full hover:bg-dourado transition-colors text-sm uppercase tracking-wide"
             >
-              Ver Vagas Abertas
+              Ver Vagas
+            </a>
+          </div>
+
+          {/* Para Consultorias */}
+          <div className="flex flex-col gap-3">
+            <p className="text-dourado-claro text-xs tracking-[0.18em] uppercase font-bold">
+              Para Consultorias
+            </p>
+            <p className="text-branco/60 text-sm leading-relaxed">
+              Consultoria de Carreira para profissionais.
+            </p>
+            <a
+              href="#contato"
+              className="self-start bg-dourado-claro text-noite font-bold px-6 py-3 rounded-full hover:bg-dourado transition-colors text-sm uppercase tracking-wide"
+            >
+              Solicitar Consultoria
             </a>
           </div>
         </motion.div>

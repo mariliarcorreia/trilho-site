@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 
 export default function Contato() {
   const [enviado, setEnviado] = useState(false);
@@ -22,7 +22,7 @@ export default function Contato() {
           transition={{ duration: 0.6 }}
           className="lg:col-span-5"
         >
-          <span className="text-dourado-claro text-sm tracking-[0.2em] uppercase">
+          <span className="text-dourado-claro text-sm tracking-[0.2em] uppercase font-bold">
             Contato
           </span>
           <h2 className="font-display font-medium text-3xl sm:text-4xl mt-4 mb-10 leading-tight">
@@ -31,18 +31,11 @@ export default function Contato() {
 
           <div className="flex flex-col gap-5 text-branco/75">
             <a
-              href="mailto:alexandre.faleiros@trilhoconsultoria.com.br"
+              href="mailto:recrutamento@trilhoconsultoria.com.br"
               className="flex items-center gap-3 hover:text-dourado-claro transition-colors"
             >
               <Mail size={18} />
-              alexandre.faleiros@trilhoconsultoria.com.br
-            </a>
-            <a
-              href="tel:+5534991270137"
-              className="flex items-center gap-3 hover:text-dourado-claro transition-colors"
-            >
-              <Phone size={18} />
-              (34) 99127-0137
+              recrutamento@trilhoconsultoria.com.br
             </a>
             <div className="flex items-center gap-3">
               <MapPin size={18} />
@@ -79,8 +72,8 @@ export default function Contato() {
                 />
               </div>
               <input
-                type="text"
-                placeholder="Empresa"
+                type="tel"
+                placeholder="Telefone"
                 className="bg-transparent border border-branco/25 rounded-lg px-4 py-3 placeholder:text-branco/40 focus:border-dourado-claro outline-none transition-colors"
               />
               <textarea

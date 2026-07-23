@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { Linkedin } from "lucide-react";
 
 const SOCIOS = [
@@ -9,13 +8,13 @@ const SOCIOS = [
     nome: "Alexandre Faleiros",
     cargo: "Diretor de Talent & Sócio",
     linkedin: "https://www.linkedin.com/in/alexandre-faleiros",
-    bio: "Administrador de Empresas pela Universidade Federal de Uberlândia (UFU), pós-graduado pela Fundação Getulio Vargas (FGV), especialista em Talent Acquisition e Gestão Estratégica de Pessoas. Possui mais de 10 anos de experiência em Recursos Humanos, atuando em empresas nacionais e multinacionais, com forte atuação em recrutamento estratégico para posições operacionais, técnicas, especialistas, liderança e executivos. Ao longo de sua carreira, liderou projetos de Employer Branding, Programas de Estágio e Trainee, atração de talentos, hunting, People Analytics e iniciativas de Diversidade, Equidade e Inclusão, sempre conectando pessoas às necessidades estratégicas do negócio. É certificado nas metodologias comportamentais Predictive Index (PI) e PDA International, agregando maior precisão às avaliações de perfil e aos processos seletivos.",
+    bio: "Administrador de Empresas pela Universidade Federal de Uberlândia (UFU), pós-graduado pela Fundação Getulio Vargas (FGV), especialista em Talent Acquisition e Gestão Estratégica de Pessoas. Possui mais de 10 anos de experiência em Recursos Humanos, atuando em empresas nacionais e multinacionais, com forte atuação em recrutamento estratégico para posições operacionais, técnicas, especialistas, liderança e executivos. Ao longo de sua carreira, liderou projetos de Employer Branding, Programas de Estágio e Trainee, atração de talentos, hunting, People Analytics e iniciativas de Diversidade, Equidade e Inclusão. É certificado nas metodologias comportamentais Predictive Index (PI) e PDA International.",
   },
   {
     nome: "William Sales",
     cargo: "Sócio & Diretor Executivo",
     linkedin: "https://www.linkedin.com/in/will-sales",
-    bio: "Administrador, pós-graduado pela Fundação Getulio Vargas (FGV), executivo com mais de 20 anos de experiência em gestão empresarial, desenvolvimento de negócios e liderança de equipes. Construiu sua carreira em empresas de grande porte, liderando operações, projetos de transformação organizacional, estratégia corporativa e desenvolvimento de pessoas. Sua atuação combina visão de negócios, capacidade analítica e foco em resultados sustentáveis, contribuindo para a estruturação de processos, crescimento organizacional e fortalecimento da cultura empresarial. Possui experiência na condução de equipes multidisciplinares e relacionamento com diferentes níveis de gestão, agregando uma visão executiva que complementa a atuação consultiva da Trilho.",
+    bio: "Administrador, pós-graduado pela Fundação Getulio Vargas (FGV), executivo com mais de 20 anos de experiência em gestão empresarial, desenvolvimento de negócios e liderança de equipes. Construiu sua carreira em empresas de grande porte, liderando operações, projetos de transformação organizacional, estratégia corporativa e desenvolvimento de pessoas. Sua atuação combina visão de negócios, capacidade analítica e foco em resultados sustentáveis.",
   },
 ];
 
@@ -23,7 +22,6 @@ export default function Equipe() {
   return (
     <section id="equipe" className="bg-pedra py-28 lg:py-36">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -44,7 +42,7 @@ export default function Equipe() {
           </p>
         </motion.div>
 
-        {/* Foto dos dois juntos */}
+        {/* Foto usando img nativa para garantir carregamento */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -52,14 +50,12 @@ export default function Equipe() {
           transition={{ duration: 0.6 }}
           className="w-full rounded-2xl overflow-hidden mb-12 relative"
         >
-          <Image
+          <img
             src="/images/equipe.png"
             alt="Alexandre Faleiros e William Sales"
-            width={1456}
-            height={816}
-            className="w-full object-cover object-top max-h-[520px]"
+            className="w-full object-cover object-top max-h-[520px] rounded-2xl"
           />
-          <div className="absolute bottom-0 left-0 right-0 h-1 bg-dourado" />
+          <div className="absolute bottom-0 left-0 right-0 h-1 bg-dourado rounded-b-2xl" />
         </motion.div>
 
         {/* Citação */}
@@ -71,14 +67,14 @@ export default function Equipe() {
           className="border-l-4 border-dourado pl-6 mb-14 max-w-3xl"
         >
           <p className="text-grafite text-base italic leading-relaxed">
-            "Mais do que conduzir processos seletivos, desenvolvemos carreiras liderando projetos estratégicos, formando equipes de alta performance e apoiando organizações na construção de resultados sustentáveis por meio da gestão e recrutamento de pessoas. Essa vivência prática permite oferecer soluções consultivas com visão de negócio, credibilidade e profundo conhecimento do mercado."
+            "Mais do que conduzir processos seletivos, desenvolvemos carreiras liderando projetos estratégicos, formando equipes de alta performance e apoiando organizações na construção de resultados sustentáveis por meio da gestão e recrutamento de pessoas."
           </p>
           <footer className="mt-3 text-dourado font-medium text-sm">
             — Alexandre Faleiros, Diretor de Talent & Sócio
           </footer>
         </motion.blockquote>
 
-        {/* Cards individuais */}
+        {/* Cards */}
         <div className="grid sm:grid-cols-2 gap-8">
           {SOCIOS.map((s, i) => (
             <motion.div
@@ -98,7 +94,6 @@ export default function Equipe() {
                   href={s.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`LinkedIn de ${s.nome}`}
                   className="text-dourado hover:text-dourado-claro transition-colors shrink-0 mt-1"
                 >
                   <Linkedin size={22} />
