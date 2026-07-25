@@ -13,11 +13,12 @@ export default function QuemSomos() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="text-dourado text-sm tracking-[0.2em] uppercase font-bold">
+          {/* QUEM SOMOS — mais leve e com mais espaço abaixo */}
+          <span className="text-dourado font-light tracking-[0.3em] uppercase block text-3xl sm:text-4xl lg:text-5xl mb-8">
             Quem Somos
           </span>
-          {/* Título 3x maior com destaque */}
-          <h2 className="font-display font-medium text-6xl sm:text-7xl lg:text-[6rem] mt-4 leading-[1] max-w-4xl">
+          {/* Frase principal */}
+          <h2 className="font-display font-medium text-5xl sm:text-6xl lg:text-7xl leading-tight max-w-4xl">
             Especialistas em conectar{" "}
             <span className="text-dourado">pessoas certas</span> a desafios certos.
           </h2>

@@ -25,11 +25,7 @@ export default function Contato() {
           <span className="text-dourado-claro text-sm tracking-[0.2em] uppercase font-bold">
             Contato
           </span>
-          <h2 className="font-display font-medium text-3xl sm:text-4xl mt-4 mb-10 leading-tight">
-            Vamos encontrar o profissional certo para sua empresa.
-          </h2>
-
-          <div className="flex flex-col gap-5 text-branco/75">
+          <div className="flex flex-col gap-5 text-branco/75 mt-8">
             <a
               href="mailto:recrutamento@trilhoconsultoria.com.br"
               className="flex items-center gap-3 hover:text-dourado-claro transition-colors"

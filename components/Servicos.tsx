@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Users, GraduationCap, BarChart3, ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { Users, GraduationCap, BarChart3, ChevronLeft, ChevronRight } from "lucide-react";
 
 const SERVICOS = [
   {
@@ -15,14 +15,14 @@ const SERVICOS = [
       { icone: "⭐", texto: "Trilho Strategy — Atração e seleção para posições de gerência, especialistas e coordenação" },
       { icone: "⭐", texto: "Trilho Executive — Posições estratégicas C-Level, Vice-Presidência e Diretoria" },
     ],
-    imagem: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=80",
+    imagem: "/images/recrutamento.png",
   },
   {
     icon: GraduationCap,
     titulo: "Treinamentos & Conteúdo Especializado",
     descricao: "Desenvolvemos programas de capacitação corporativa personalizados, presenciais e online, alinhados aos desafios e objetivos reais de cada equipe. Produzimos conteúdos estratégicos em diversos formatos — treinamentos, workshops, podcasts, vídeos e materiais técnicos — que aceleram o desenvolvimento profissional e fortalecem a tomada de decisão.",
     subservicos: [],
-    imagem: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=900&q=80",
+    imagem: "/images/treinamento.png",
   },
   {
     icon: BarChart3,
@@ -59,7 +59,6 @@ export default function Servicos() {
           Serviços
         </span>
 
-        {/* Tabs maiores */}
         <div className="flex gap-3 mb-12 flex-wrap">
           {SERVICOS.map((sv, i) => (
             <button
@@ -85,19 +84,14 @@ export default function Servicos() {
             transition={{ duration: 0.5 }}
             className="grid lg:grid-cols-2 gap-12 items-center"
           >
-            {/* Texto */}
             <div className="flex flex-col gap-6">
               <div className="flex items-center gap-4">
                 <div className="w-14 h-14 rounded-full bg-dourado flex items-center justify-center shrink-0">
                   <s.icon size={28} strokeWidth={1.5} color="#FFFFFF" />
                 </div>
-                <h2 className="font-display font-medium text-3xl sm:text-4xl leading-tight">
-                  {s.titulo}
-                </h2>
+                <h2 className="font-display font-medium text-3xl sm:text-4xl leading-tight">{s.titulo}</h2>
               </div>
-
               <p className="text-branco/80 text-lg leading-relaxed">{s.descricao}</p>
-
               {s.subservicos.length > 0 && (
                 <ul className="flex flex-col gap-4">
                   {s.subservicos.map((sub, i) => (
@@ -108,16 +102,11 @@ export default function Servicos() {
                   ))}
                 </ul>
               )}
-
-              <a
-                href="#contato"
-                className="self-start mt-2 bg-dourado-claro text-noite font-bold px-7 py-3.5 rounded-full hover:bg-dourado transition-colors uppercase tracking-wide text-sm"
-              >
+              <a href="#contato" className="self-start mt-2 bg-dourado-claro text-noite font-bold px-7 py-3.5 rounded-full hover:bg-dourado transition-colors uppercase tracking-wide text-sm">
                 Fale com a Trilho
               </a>
             </div>
 
-            {/* Imagem */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -129,16 +118,13 @@ export default function Servicos() {
           </motion.div>
         </AnimatePresence>
 
-        {/* Navegação */}
         <div className="flex items-center gap-4 mt-12">
           <button onClick={anterior} className="w-10 h-10 rounded-full border border-branco/30 flex items-center justify-center hover:border-dourado-claro hover:text-dourado-claro transition-colors">
             <ChevronLeft size={20} />
           </button>
           <div className="flex gap-2">
             {SERVICOS.map((_, i) => (
-              <button key={i} onClick={() => setAtivo(i)}
-                className={`h-1.5 rounded-full transition-all duration-300 ${i === ativo ? "w-8 bg-dourado-claro" : "w-3 bg-branco/30"}`}
-              />
+              <button key={i} onClick={() => setAtivo(i)} className={`h-1.5 rounded-full transition-all duration-300 ${i === ativo ? "w-8 bg-dourado-claro" : "w-3 bg-branco/30"}`} />
             ))}
           </div>
           <button onClick={proximo} className="w-10 h-10 rounded-full border border-branco/30 flex items-center justify-center hover:border-dourado-claro hover:text-dourado-claro transition-colors">

@@ -29,36 +29,32 @@ export default function Equipe() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="text-dourado text-sm tracking-[0.2em] uppercase font-bold">
-            Nossa Equipe
-          </span>
+          <span className="text-dourado text-sm tracking-[0.2em] uppercase font-bold">Nossa Equipe</span>
           <h2 className="font-display font-medium text-3xl sm:text-5xl mt-4 leading-tight">
-            Dois sócios.{" "}
-            <span className="text-dourado">Diferentes trajetórias.</span>{" "}
-            Um mesmo propósito.
+            Dois sócios. <span className="text-dourado">Diferentes trajetórias.</span> Um mesmo propósito.
           </h2>
           <p className="mt-6 text-grafite text-lg leading-relaxed max-w-3xl">
             A Trilho Consultoria foi fundada por profissionais com sólida trajetória em Recursos Humanos, Estratégia e Gestão Empresarial, reunindo experiência em empresas nacionais e multinacionais dos segmentos de Agronegócio, Indústria e Celulose.
           </p>
         </motion.div>
 
-        {/* Foto usando img nativa para garantir carregamento */}
+        {/* Foto com style inline para forçar carregamento */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.6 }}
           className="w-full rounded-2xl overflow-hidden mb-12 relative"
+          style={{ minHeight: "300px" }}
         >
           <img
             src="/images/equipe.png"
             alt="Alexandre Faleiros e William Sales"
-            className="w-full object-cover object-top max-h-[520px] rounded-2xl"
+            style={{ width: "100%", maxHeight: "520px", objectFit: "cover", objectPosition: "top", display: "block", borderRadius: "1rem" }}
           />
-          <div className="absolute bottom-0 left-0 right-0 h-1 bg-dourado rounded-b-2xl" />
+          <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "4px", backgroundColor: "#9A7B3A", borderRadius: "0 0 1rem 1rem" }} />
         </motion.div>
 
-        {/* Citação */}
         <motion.blockquote
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -74,7 +70,6 @@ export default function Equipe() {
           </footer>
         </motion.blockquote>
 
-        {/* Cards */}
         <div className="grid sm:grid-cols-2 gap-8">
           {SOCIOS.map((s, i) => (
             <motion.div
@@ -90,12 +85,7 @@ export default function Equipe() {
                   <h3 className="font-display text-xl font-medium text-noite">{s.nome}</h3>
                   <p className="text-dourado text-sm font-medium mt-1">{s.cargo}</p>
                 </div>
-                <a
-                  href={s.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-dourado hover:text-dourado-claro transition-colors shrink-0 mt-1"
-                >
+                <a href={s.linkedin} target="_blank" rel="noopener noreferrer" className="text-dourado hover:text-dourado-claro transition-colors shrink-0 mt-1">
                   <Linkedin size={22} />
                 </a>
               </div>
