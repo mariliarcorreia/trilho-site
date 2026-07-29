@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Users, GraduationCap, BarChart3, ChevronLeft, ChevronRight } from "lucide-react";
+import { Users, GraduationCap, ChevronLeft, ChevronRight } from "lucide-react";
 
 const SERVICOS = [
   {
@@ -24,27 +24,16 @@ const SERVICOS = [
     subservicos: [],
     imagem: "/images/treinamento.png",
   },
-  {
-    icon: BarChart3,
-    titulo: "Consultoria",
-    descricao: "Consultoria de Carreira para profissionais que desejam se destacar no mercado e aumentar suas chances de aprovação em processos seletivos.",
-    subservicos: [
-      { icone: "⭐", texto: "LinkedIn e currículo estratégicos" },
-      { icone: "⭐", texto: "Posicionamento e marca profissional" },
-      { icone: "⭐", texto: "Preparação para entrevistas e processos seletivos" },
-      { icone: "⭐", texto: "Planejamento de carreira e transição profissional" },
-    ],
-    imagem: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&q=80",
-  },
 ];
 
 export default function Servicos() {
   const [ativo, setAtivo] = useState(0);
 
+  // 15 segundos de intervalo
   useEffect(() => {
     const timer = setInterval(() => {
       setAtivo((prev) => (prev + 1) % SERVICOS.length);
-    }, 9000);
+    }, 25000);
     return () => clearInterval(timer);
   }, []);
 

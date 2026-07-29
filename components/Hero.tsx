@@ -50,11 +50,12 @@ export default function Hero() {
           Consultoria especializada em recrutamento e seleção, treinamentos e conteúdos estratégicos para empresas do agronegócio e da indústria.
         </motion.p>
 
+        {/* Apenas dois CTAs: Para Empresas e Para Candidatos */}
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.35 }}
-          className="mt-14 pt-10 border-t border-branco/10 grid sm:grid-cols-3 gap-8 max-w-4xl"
+          className="mt-14 pt-10 border-t border-branco/10 grid sm:grid-cols-2 gap-8 max-w-2xl"
         >
           <div className="flex flex-col gap-3">
             <p className="text-dourado-claro text-xs tracking-[0.18em] uppercase font-bold">Para Empresas</p>
@@ -68,13 +69,6 @@ export default function Hero() {
             <p className="text-branco/60 text-sm leading-relaxed">Acesse as vagas disponíveis e candidate-se à sua próxima oportunidade.</p>
             <a href={VAGAS_URL} target="_blank" rel="noopener noreferrer" className="self-start bg-dourado-claro text-noite font-bold px-6 py-3 rounded-full hover:bg-dourado transition-colors text-sm uppercase tracking-wide">
               Ver Vagas
-            </a>
-          </div>
-          <div className="flex flex-col gap-3">
-            <p className="text-dourado-claro text-xs tracking-[0.18em] uppercase font-bold">Para Consultorias</p>
-            <p className="text-branco/60 text-sm leading-relaxed">Consultoria de Carreira para profissionais.</p>
-            <a href="#contato" className="self-start bg-dourado-claro text-noite font-bold px-6 py-3 rounded-full hover:bg-dourado transition-colors text-sm uppercase tracking-wide">
-              Solicitar Consultoria
             </a>
           </div>
         </motion.div>
