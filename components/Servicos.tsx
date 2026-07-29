@@ -16,6 +16,7 @@ const SERVICOS = [
       { icone: "⭐", texto: "Trilho Executive — Posições estratégicas C-Level, Vice-Presidência e Diretoria" },
     ],
     imagem: "/images/recrutamento.png",
+    posicao: "object-center",
   },
   {
     icon: GraduationCap,
@@ -23,6 +24,7 @@ const SERVICOS = [
     descricao: "Desenvolvemos programas de capacitação corporativa personalizados, presenciais e online, alinhados aos desafios e objetivos reais de cada equipe. Produzimos conteúdos estratégicos em diversos formatos — treinamentos, workshops, podcasts, vídeos e materiais técnicos — que aceleram o desenvolvimento profissional e fortalecem a tomada de decisão.",
     subservicos: [],
     imagem: "/images/treinamento.png",
+    posicao: "object-[center_20%]",
   },
 ];
 
@@ -100,9 +102,9 @@ export default function Servicos() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="rounded-2xl overflow-hidden h-[400px] lg:h-[480px]"
+              className="rounded-2xl overflow-hidden"
             >
-              <img src={s.imagem} alt={s.titulo} className="w-full h-full object-cover object-top" />
+              <img src={s.imagem} alt={s.titulo} className="w-full h-auto object-contain rounded-2xl" />
             </motion.div>
           </motion.div>
         </AnimatePresence>
