@@ -102,7 +102,7 @@ export default function Servicos() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="rounded-2xl overflow-hidden h-[400px] lg:h-[480px]"
             >
-              <img src={s.imagem} alt={s.titulo} className="w-full h-full object-cover" />
+              <img src={s.imagem} alt={s.titulo} className="w-full h-full object-cover object-top" />
             </motion.div>
           </motion.div>
         </AnimatePresence>

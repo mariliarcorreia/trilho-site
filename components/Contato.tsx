@@ -6,10 +6,31 @@ import { Mail, MapPin } from "lucide-react";
 
 export default function Contato() {
   const [enviado, setEnviado] = useState(false);
+  const [enviando, setEnviando] = useState(false);
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setEnviado(true);
+    setEnviando(true);
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xpqvkebg", {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        setEnviado(true);
+        form.reset();
+      }
+    } catch (error) {
+      console.error("Erro ao enviar formulário:", error);
+    } finally {
+      setEnviando(false);
+    }
   }
 
   return (
@@ -49,7 +70,7 @@ export default function Contato() {
         >
           {enviado ? (
             <div className="border border-dourado-claro/40 rounded-2xl p-8 text-branco/85">
-              Mensagem enviada. Em breve a equipe da Trilho entrará em contato.
+              Mensagem enviada com sucesso! Em breve a equipe da Trilho entrará em contato.
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-5">
@@ -57,32 +78,37 @@ export default function Contato() {
                 <input
                   required
                   type="text"
+                  name="nome"
                   placeholder="Nome"
                   className="bg-transparent border border-branco/25 rounded-lg px-4 py-3 placeholder:text-branco/40 focus:border-dourado-claro outline-none transition-colors"
                 />
                 <input
                   required
                   type="email"
+                  name="email"
                   placeholder="E-mail"
                   className="bg-transparent border border-branco/25 rounded-lg px-4 py-3 placeholder:text-branco/40 focus:border-dourado-claro outline-none transition-colors"
                 />
               </div>
               <input
                 type="tel"
+                name="telefone"
                 placeholder="Telefone"
                 className="bg-transparent border border-branco/25 rounded-lg px-4 py-3 placeholder:text-branco/40 focus:border-dourado-claro outline-none transition-colors"
               />
               <textarea
                 required
                 rows={4}
+                name="mensagem"
                 placeholder="Como podemos ajudar?"
                 className="bg-transparent border border-branco/25 rounded-lg px-4 py-3 placeholder:text-branco/40 focus:border-dourado-claro outline-none transition-colors resize-none"
               />
               <button
                 type="submit"
-                className="self-start bg-dourado-claro text-noite font-medium px-7 py-3.5 rounded-full hover:bg-dourado transition-colors"
+                disabled={enviando}
+                className="self-start bg-dourado-claro text-noite font-medium px-7 py-3.5 rounded-full hover:bg-dourado transition-colors disabled:opacity-60"
               >
-                Enviar mensagem
+                {enviando ? "Enviando..." : "Enviar mensagem"}
               </button>
             </form>
           )}
