@@ -27,9 +27,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-dourado-claro text-base tracking-[0.2em] uppercase mb-6 font-bold"
+          className="text-dourado-claro text-2xl sm:text-3xl tracking-[0.2em] uppercase mb-6 font-bold"
         >
-          Recrutamento & Seleção · Agronegócio & Indústria
+          Recrutamento & Seleção
         </motion.p>
 
         <motion.h1
@@ -45,12 +45,11 @@ export default function Hero() {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.22 }}
-          className="mt-7 text-branco/80 text-lg max-w-xl leading-relaxed"
+          className="mt-7 text-branco/80 text-lg max-w-xl leading-relaxed text-justify"
         >
           Consultoria especializada em recrutamento e seleção, treinamentos e conteúdos estratégicos para empresas do agronegócio e da indústria.
         </motion.p>
 
-        {/* Apenas dois CTAs: Para Empresas e Para Candidatos */}
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
@@ -59,14 +58,14 @@ export default function Hero() {
         >
           <div className="flex flex-col gap-3">
             <p className="text-dourado-claro text-xs tracking-[0.18em] uppercase font-bold">Para Empresas</p>
-            <p className="text-branco/60 text-sm leading-relaxed">Encontre o profissional certo para cada posição do seu negócio.</p>
+            <p className="text-branco/60 text-sm leading-relaxed text-justify">Encontre o profissional certo para cada posição do seu negócio.</p>
             <a href="#contato" className="self-start bg-dourado-claro text-noite font-bold px-6 py-3 rounded-full hover:bg-dourado transition-colors text-sm uppercase tracking-wide">
               Fale com a Trilho
             </a>
           </div>
           <div className="flex flex-col gap-3">
             <p className="text-dourado-claro text-xs tracking-[0.18em] uppercase font-bold">Para Candidatos</p>
-            <p className="text-branco/60 text-sm leading-relaxed">Acesse as vagas disponíveis e candidate-se à sua próxima oportunidade.</p>
+            <p className="text-branco/60 text-sm leading-relaxed text-justify">Acesse as vagas disponíveis e candidate-se à sua próxima oportunidade.</p>
             <a href={VAGAS_URL} target="_blank" rel="noopener noreferrer" className="self-start bg-dourado-claro text-noite font-bold px-6 py-3 rounded-full hover:bg-dourado transition-colors text-sm uppercase tracking-wide">
               Ver Vagas
             </a>

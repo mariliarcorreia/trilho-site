@@ -33,14 +33,13 @@ export default function Clientes() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: i * 0.12 }}
-              className="bg-branco rounded-2xl border border-linha flex flex-col items-center justify-center gap-6 p-10 min-h-[240px] w-full max-w-sm"
+              className="bg-branco rounded-2xl border border-linha flex items-center justify-center p-10 min-h-[200px] w-full max-w-sm"
             >
               <img
                 src={c.logo}
                 alt={c.nome}
-                style={{ width: "100%", height: "140px", objectFit: "contain" }}
+                style={{ width: "100%", height: "120px", objectFit: "contain" }}
               />
-              <p className="text-grafite font-medium text-base text-center">{c.nome}</p>
             </motion.div>
           ))}
         </div>

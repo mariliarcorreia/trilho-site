@@ -11,9 +11,9 @@ const SERVICOS = [
     descricao: "Processos seletivos completos, do alinhamento de perfil ideal à integração do profissional aprovado. Conheça nossas soluções para R&S:",
     subservicos: [
       { icone: "🌱", texto: "Trilho Estágio — Recrutamento especializado para programas de estágio, com processos personalizados à cultura, aos desafios e ao perfil de talento que cada empresa busca. Da atração à seleção, encontramos jovens com potencial para crescer junto com o seu negócio." },
-      { icone: "⭐", texto: "Trilho Talent — Posições técnicas, operacionais e administrativas até nível Sênior" },
-      { icone: "⭐", texto: "Trilho Strategy — Atração e seleção para posições de gerência, especialistas e coordenação" },
-      { icone: "⭐", texto: "Trilho Executive — Posições estratégicas C-Level, Vice-Presidência e Diretoria" },
+      { icone: "logo", texto: "Trilho Talent — Posições técnicas, operacionais e administrativas até nível Sênior" },
+      { icone: "logo", texto: "Trilho Strategy — Atração e seleção para posições de gerência, especialistas e coordenação" },
+      { icone: "logo", texto: "Trilho Executive — Posições estratégicas C-Level, Vice-Presidência e Diretoria" },
     ],
     imagem: "/images/recrutamento.png",
     posicao: "object-center",
@@ -31,7 +31,6 @@ const SERVICOS = [
 export default function Servicos() {
   const [ativo, setAtivo] = useState(0);
 
-  // 15 segundos de intervalo
   useEffect(() => {
     const timer = setInterval(() => {
       setAtivo((prev) => (prev + 1) % SERVICOS.length);
@@ -82,12 +81,20 @@ export default function Servicos() {
                 </div>
                 <h2 className="font-display font-medium text-3xl sm:text-4xl leading-tight">{s.titulo}</h2>
               </div>
-              <p className="text-branco/80 text-lg leading-relaxed">{s.descricao}</p>
+              <p className="text-branco/80 text-lg leading-relaxed text-justify">{s.descricao}</p>
               {s.subservicos.length > 0 && (
                 <ul className="flex flex-col gap-4">
                   {s.subservicos.map((sub, i) => (
-                    <li key={i} className="flex items-start gap-3 text-branco/80 text-sm leading-relaxed">
-                      <span className="text-dourado-claro text-base shrink-0 mt-0.5">{sub.icone}</span>
+                    <li key={i} className="flex items-start gap-3 text-branco/80 text-sm leading-relaxed text-justify">
+                      {sub.icone === "logo" ? (
+                        <img
+                          src="/images/logo-nova.png"
+                          alt="Trilho"
+                          className="w-4 h-4 object-contain shrink-0 mt-0.5"
+                        />
+                      ) : (
+                        <span className="text-dourado-claro text-base shrink-0 mt-0.5">{sub.icone}</span>
+                      )}
                       {sub.texto}
                     </li>
                   ))}

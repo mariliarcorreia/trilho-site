@@ -46,7 +46,7 @@ export default function Pilares() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6 }}
-          className="mb-16 text-center"
+          className="mb-16"
         >
           <span className="text-dourado text-sm tracking-[0.2em] uppercase font-bold">
             Nossa Essência
@@ -66,7 +66,7 @@ export default function Pilares() {
               transition={{ duration: 0.5, delay: i * 0.15 }}
               whileHover={{ y: -8 }}
               style={{ backgroundColor: p.bg }}
-              className="relative flex flex-col items-center text-center gap-7 px-10 py-14 cursor-default transition-all duration-300 hover:shadow-2xl"
+              className="relative flex flex-col items-center gap-7 px-10 py-14 cursor-default transition-all duration-300 hover:shadow-2xl"
             >
               <motion.div
                 whileHover={{ rotate: 12, scale: 1.2 }}
@@ -89,13 +89,13 @@ export default function Pilares() {
               {p.lista && p.valores ? (
                 <ul className="flex flex-col gap-2">
                   {p.valores.map((v) => (
-                    <li key={v} style={{ color: p.textColor }} className="text-base font-medium">
+                    <li key={v} style={{ color: p.textColor }} className="text-sm leading-relaxed opacity-85">
                       {v}
                     </li>
                   ))}
                 </ul>
               ) : (
-                <p style={{ color: p.textColor }} className="text-sm leading-relaxed opacity-85">
+                <p style={{ color: p.textColor }} className="w-full text-sm leading-relaxed opacity-85 text-justify">
                   {p.texto}
                 </p>
               )}

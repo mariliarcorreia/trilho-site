@@ -6,7 +6,7 @@ import { Linkedin } from "lucide-react";
 const SOCIOS = [
   {
     nome: "Alexandre Faleiros",
-    cargo: "Diretor de Talent & Sócio",
+    cargo: "Sócio & Diretor de Talent",
     linkedin: "https://www.linkedin.com/in/alexandre-faleiros",
     bio: "Administrador de Empresas pela Universidade Federal de Uberlândia (UFU), pós-graduado pela Fundação Getulio Vargas (FGV), especialista em Talent Acquisition e Gestão Estratégica de Pessoas. Possui mais de 10 anos de experiência em Recursos Humanos, atuando em empresas nacionais e multinacionais, com forte atuação em recrutamento estratégico para posições operacionais, técnicas, especialistas, liderança e executivos. Ao longo de sua carreira, liderou projetos de Employer Branding, Programas de Estágio e Trainee, atração de talentos, hunting, People Analytics e iniciativas de Diversidade, Equidade e Inclusão. É certificado nas metodologias comportamentais Predictive Index (PI) e PDA International.",
   },
@@ -14,7 +14,7 @@ const SOCIOS = [
     nome: "William Sales",
     cargo: "Sócio & Diretor Executivo",
     linkedin: "https://www.linkedin.com/in/will-sales",
-    bio: "Administrador, pós-graduado pela Fundação Getulio Vargas (FGV), executivo com mais de 20 anos de experiência em gestão empresarial, desenvolvimento de negócios e liderança de equipes. Construiu sua carreira em empresas de grande porte, liderando operações, projetos de transformação organizacional, estratégia corporativa e desenvolvimento de pessoas. Sua atuação combina visão de negócios, capacidade analítica e foco em resultados sustentáveis.",
+    bio: "Administrador, pós-graduado pela Fundação Getúlio Vargas (FGV), executivo com mais de 20 anos de experiência em gestão empresarial, gerenciamento de riscos, desenvolvimento de negócios e liderança de equipes multidisciplinares e multiculturais. Construiu sua carreira em empresas de grande porte, tanto nacionais como multinacionais, passando por todas as etapas organizacionais, liderando operações, projetos de transformação organizacional, estratégia corporativa e desenvolvimento de pessoas. Sua atuação combina visão de negócios, capacidade analítica e foco em resultados sustentáveis.",
   },
 ];
 
@@ -33,12 +33,11 @@ export default function Equipe() {
           <h2 className="font-display font-medium text-3xl sm:text-5xl mt-4 leading-tight">
             Dois sócios. <span className="text-dourado">Diferentes trajetórias.</span> Um mesmo propósito.
           </h2>
-          <p className="mt-6 text-grafite text-lg leading-relaxed max-w-3xl">
+          <p className="mt-6 text-grafite text-lg leading-relaxed max-w-3xl text-justify">
             A Trilho Consultoria foi fundada por profissionais com sólida trajetória em Recursos Humanos, Estratégia e Gestão Empresarial, reunindo experiência em empresas nacionais e multinacionais dos segmentos de Agronegócio, Indústria e Celulose.
           </p>
         </motion.div>
 
-        {/* Foto com style inline para forçar carregamento */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -48,7 +47,7 @@ export default function Equipe() {
           style={{ minHeight: "300px" }}
         >
           <img
-            src="/images/equipe.png"
+            src="/images/equipe.png?v=2"
             alt="Alexandre Faleiros e William Sales"
             style={{ width: "100%", maxHeight: "520px", objectFit: "cover", objectPosition: "top", display: "block", borderRadius: "1rem" }}
           />
@@ -62,11 +61,11 @@ export default function Equipe() {
           transition={{ duration: 0.5 }}
           className="border-l-4 border-dourado pl-6 mb-14 max-w-3xl"
         >
-          <p className="text-grafite text-base italic leading-relaxed">
+          <p className="text-grafite text-base italic leading-relaxed text-justify">
             "Mais do que conduzir processos seletivos, desenvolvemos carreiras liderando projetos estratégicos, formando equipes de alta performance e apoiando organizações na construção de resultados sustentáveis por meio da gestão e recrutamento de pessoas."
           </p>
           <footer className="mt-3 text-dourado font-medium text-sm">
-            — Alexandre Faleiros, Diretor de Talent & Sócio
+            — Alexandre Faleiros, Sócio & Diretor de Talent
           </footer>
         </motion.blockquote>
 
@@ -90,7 +89,7 @@ export default function Equipe() {
                 </a>
               </div>
               <div className="h-px bg-linha" />
-              <p className="text-grafite text-sm leading-relaxed">{s.bio}</p>
+              <p className="text-grafite text-sm leading-relaxed text-justify">{s.bio}</p>
             </motion.div>
           ))}
         </div>

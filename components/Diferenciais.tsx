@@ -66,7 +66,7 @@ export default function Diferenciais() {
                 <h3 className="font-display text-xl sm:text-2xl font-medium mb-2 group-hover:text-dourado transition-colors">
                   {e.titulo}
                 </h3>
-                <p className="text-grafite leading-relaxed max-w-xl">
+                <p className="text-grafite leading-relaxed max-w-xl text-justify">
                   {e.texto}
                 </p>
               </div>
