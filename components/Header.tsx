@@ -14,7 +14,7 @@ const NAV_LINKS = [
   { label: "CONTATO", href: "#contato" },
 ];
 
-const VAGAS_URL = "#";
+const VAGAS_URL = "https://trilhoconsultoria.inhire.app/vagas";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);

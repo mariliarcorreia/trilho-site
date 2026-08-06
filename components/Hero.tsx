@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const VAGAS_URL = "#";
+const VAGAS_URL = "https://trilhoconsultoria.inhire.app/vagas";
 
 export default function Hero() {
   return (
