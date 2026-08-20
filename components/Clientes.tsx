@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 const CLIENTES = [
   { nome: "MAZI Consultoria e Contabilidade", logo: "/images/mazi-consultoria.png" },
+  { nome: "LD Celulose", logo: "/images/ld-celulose.png" },
 ];
 
 export default function Clientes() {
