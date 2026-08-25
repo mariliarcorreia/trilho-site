@@ -40,7 +40,7 @@ export default function Clientes() {
               <img
                 src={c.logo}
                 alt={c.nome}
-                style={{ width: "100%", height: "120px", objectFit: "contain" }}
+                style={{ width: "100%", height: "160px", objectFit: "contain" }}
               />
             </motion.div>
           ))}
