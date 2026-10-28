@@ -120,9 +120,16 @@
       {"nome": "galpao_vizinho_esquerda_EFS", "x0": -42, "x1": -17, "y0": -6, "y1": 40, "altura": 7.5, "cor": "concreto"},
       {"nome": "predio_esquina_esquerda", "x0": -46, "x1": -22, "y0": -28, "y1": -8, "altura": 6.0, "cor": "branco"},
       {"nome": "galpao_eletrica", "x0": -80, "x1": -22, "y0": 0, "y1": 16, "altura": 7.0, "cor": "branco"},
-      {"nome": "galpao_vizinho_direita", "x0": 82, "x1": 118, "y0": 0, "y1": 40, "altura": 8.0, "cor": "concreto"}
+      {"nome": "galpao_vizinho_direita", "x0": 80, "x1": 125, "y0": 30, "y1": 75, "altura": 8.0, "cor": "concreto"}
     ],
     "carros_rua_lateral": [[-13.3, -14.0], [-13.3, -3.0], [-13.3, 8.0], [-13.3, 27.0]],
-    "torres": []
+    "torres": [],
+    "horizonte": {
+      "_nota": "Faixa generica de arvores e casas baixas ao fundo, so para o horizonte nao ficar vazio (as fotos mostram bairro residencial arborizado). Nao representa construcoes especificas. Substituir por levantamento ou modelo do entorno quando houver.",
+      "ativo": true, "semente": 5,
+      "arvores": 4000, "casas": 2600,
+      "raio_min": 110.0, "raio_max": 1300.0,
+      "excluir_faixa_y": [-75.0, -25.0]
+    }
   }
 }

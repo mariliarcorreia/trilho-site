@@ -172,3 +172,43 @@ def construir_contexto(cfg, modelos=None):
             tipo = rng.choice(["sedan", "hatch"])
             m = bpy.data.collections.get(f"MODELO_{tipo}_{cor}") or _modelo_carro(tipo, cor)
             cena.instanciar(f"Ctx_carro_est_{fila}_{k}", col, m, (x, y, 0.0), 90 + rng.uniform(-4, 4))
+
+
+def construir_horizonte(cfg):
+    """Arvores e casas baixas instanciadas num anel ao redor do terreno."""
+    hz = cfg["contexto"].get("horizonte", {})
+    col = cena.colecao_limpa("Contexto/Horizonte")
+    if not (cfg["contexto"].get("ativo", True) and hz.get("ativo")):
+        return
+    arv = _colecao_modelo("MODELO_arvore")
+    bm = bmesh.new()
+    bmesh.ops.create_icosphere(bm, subdivisions=2, radius=1.0)
+    for vv in bm.verts:
+        vv.co.z = vv.co.z * 0.75 + 1.9
+    cena.objeto_bmesh("copa", arv, bm, M("copa_arvore"))
+    cena.cilindro("tronco", arv, 0, 0, 0, 0.12, 1.4, M("tronco"), 8)
+    casa = _colecao_modelo("MODELO_casa")
+    cena.caixa("paredes", casa, -4, 4, -5, 5, 0, 3.2, M("contexto_branco"))
+    cena.prisma("telhado", casa, [(-4.4, -5.4), (4.4, -5.4), (4.4, 5.4), (-4.4, 5.4)], 3.2, 3.25, M("telha_ceramica"))
+    tel = casa.objects["telhado"]
+    for vv in tel.data.vertices:
+        if vv.co.z > 3.22:
+            vv.co.z = 3.2 + 1.6 * (1 - abs(vv.co.x) / 4.4)
+    rng = random.Random(hz["semente"])
+    y0, y1 = hz["excluir_faixa_y"]
+
+    def ponto():
+        while True:
+            ang = rng.uniform(0, 2 * math.pi)
+            r = math.sqrt(rng.uniform(hz["raio_min"] ** 2, hz["raio_max"] ** 2))
+            x, y = 20 + r * math.cos(ang), 20 + r * math.sin(ang)
+            if not (y0 < y < y1):
+                return x, y
+
+    for i in range(hz["arvores"]):
+        x, y = ponto()
+        cena.instanciar(f"Hz_arvore_{i}", col, arv, (x, y, 0), rng.uniform(0, 360), rng.uniform(2.2, 4.5))
+    for i in range(hz["casas"]):
+        x, y = ponto()
+        e = cena.instanciar(f"Hz_casa_{i}", col, casa, (x, y, 0), rng.choice((0, 90)) + rng.uniform(-8, 8), 1.0)
+        e.scale = (rng.uniform(0.8, 1.4), rng.uniform(0.8, 1.3), rng.uniform(0.9, 1.6))

@@ -279,7 +279,7 @@ def _calcada():
 def _terreno_distante():
     mat, nt, bsdf, _ = _novo("terreno_distante")
     _set(bsdf, rug=1.0)
-    _ruido_cor(nt, bsdf, (0.27, 0.27, 0.15), (0.45, 0.30, 0.20), 0.02, contraste=(0.3, 0.7))
+    _ruido_cor(nt, bsdf, (0.14, 0.17, 0.08), (0.36, 0.24, 0.16), 0.02, contraste=(0.35, 0.75))
     return mat
 
 
@@ -324,6 +324,9 @@ _CONSTRUTORES = {
     "contexto_concreto": _simples("contexto_concreto", (0.55, 0.55, 0.53), 0.0, 0.85),
     "contexto_branco": _simples("contexto_branco", (0.80, 0.80, 0.78), 0.0, 0.85),
     "contexto_telhado": _simples("contexto_telhado", (0.50, 0.50, 0.50), 0.4, 0.5),
+    "copa_arvore": _simples("copa_arvore", (0.07, 0.13, 0.05), 0.0, 0.85),
+    "tronco": _simples("tronco", (0.18, 0.13, 0.09), 0.0, 0.9),
+    "telha_ceramica": _simples("telha_ceramica", (0.42, 0.20, 0.12), 0.0, 0.8),
 }
 
 

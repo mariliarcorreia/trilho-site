@@ -79,6 +79,7 @@ def construir_cena(sem_contexto=False):
     terreno.construir(fachada)
     modelos = veiculos.construir(fachada)
     veiculos.construir_contexto(fachada, modelos)
+    veiculos.construir_horizonte(fachada)
     externa.construir(cfg_render["luz"])
     cams_val = externas.construir_validacao(cfg_cam, calib)
     cams_mov = externas.construir_movimentos(cfg_cam, calib)
