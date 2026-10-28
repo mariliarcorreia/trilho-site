@@ -1,15 +1,16 @@
 {
-  "_leia_me": "Imagens das cenas em estilo Pixar geradas no Canva. 'canva_id' e o codigo da imagem na conta Canva (link: https://www.canva.com/M/<canva_id>). O apresentador aprovado e MAHZVYIkvFI e serve de referencia para todas as cenas dele.",
-  "apresentador_referencia": "MAHZVYIkvFI",
+  "_leia_me": "Imagens das cenas em estilo Pixar geradas no Canva, SEM logomarca nem texto (ver referencias/identidade/REGRAS_DE_MARCA.md). A logomarca oficial e aplicada depois, na composicao. Link: https://www.canva.com/M/<canva_id>.",
+  "apresentador_referencia": "MAHZVrr3GfM",
+  "apresentador_aprovado_original": "MAHZVYIkvFI",
   "cenas": [
-    {"cena": 3,  "nome": "apresentador_boas_vindas", "canva_id": "MAHZVYIkvFI", "status": "aprovado"},
-    {"cena": 4,  "nome": "soldador_inox",            "canva_id": "MAHZVngZf3w", "status": "revisar: placa com a palavra METALMAQ, trocar por INOVA"},
-    {"cena": 5,  "nome": "frigorifico_cliente",      "canva_id": "MAHZVveWnDk", "status": "aguardando aprovacao"},
-    {"cena": 9,  "nome": "inspecao_qualidade",       "canva_id": "MAHZVjhRamE", "status": "aguardando aprovacao"},
-    {"cena": 10, "nome": "apresentador_joinha",      "canva_id": "MAHZVv_hHVw", "status": "aguardando aprovacao"},
-    {"cena": 11, "nome": "equipe_boas_vindas",       "canva_id": "MAHZVozpP9E", "status": "aguardando aprovacao"},
-    {"cena": 16, "nome": "novo_colaborador_epis",    "canva_id": "MAHZVk9MhRI", "status": "aguardando aprovacao"},
-    {"cena": 17, "nome": "faixa_de_seguranca",       "canva_id": "MAHZVsum8yc", "status": "aguardando aprovacao"},
-    {"cena": 18, "nome": "colegas_cuidando",         "canva_id": "MAHZVnEEcOg", "status": "aguardando aprovacao"}
+    {"cena": 3,  "nome": "apresentador_boas_vindas", "canva_id": "MAHZVrr3GfM", "logo_em": ["capacete", "bolso da camisa", "cracha"]},
+    {"cena": 4,  "nome": "soldador_inox",            "canva_id": "MAHZVs_hwgk", "logo_em": ["bone"]},
+    {"cena": 5,  "nome": "frigorifico_cliente",      "canva_id": "MAHZVjjRxqs", "logo_em": ["camisa do tecnico", "plaqueta do equipamento"]},
+    {"cena": 9,  "nome": "inspecao_qualidade",       "canva_id": "MAHZVqdGhQs", "logo_em": ["capacete"]},
+    {"cena": 10, "nome": "apresentador_joinha",      "canva_id": "MAHZVjIMlTc", "logo_em": ["capacete", "bolso da camisa", "cracha"]},
+    {"cena": 11, "nome": "equipe_boas_vindas",       "canva_id": "MAHZVgGEXEo", "logo_em": ["parede laranja ao fundo", "camisas"]},
+    {"cena": 16, "nome": "novo_colaborador_epis",    "canva_id": "MAHZVnDDLFY", "logo_em": ["capacete no banco"]},
+    {"cena": 17, "nome": "faixa_de_seguranca",       "canva_id": "MAHZVlrhrXE", "logo_em": ["empilhadeira", "capacete"]},
+    {"cena": 18, "nome": "colegas_cuidando",         "canva_id": "MAHZVvD2xOg", "logo_em": ["capacetes"]}
   ]
 }
