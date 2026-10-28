@@ -1,0 +1,5 @@
+# sequencias de quadros das previas (o MP4 montado e versionado)
+saida/previas/*/
+# arquivos temporarios do Blender
+*.blend1
+__pycache__/

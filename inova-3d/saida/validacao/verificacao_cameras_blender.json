@@ -1,0 +1,63 @@
+{
+  "B": {
+    "medio": 4.37,
+    "max": 18.1,
+    "por_ponto": {
+      "g1_topo_esq": 1.5,
+      "g1_topo_dir": 2.1,
+      "g1_faixa_branca_esq": 6.5,
+      "g1_base_esq": 1.6,
+      "anexo_topo_esq": 4.4,
+      "adm_frente_esq_topo": 3.2,
+      "adm_frente_esq_base": 5.7,
+      "adm_frente_dir_topo": 7.8,
+      "adm_frente_dir_base": 18.1,
+      "torre_esq_topo": 10.8,
+      "torre_esq_base": 1.1,
+      "torre_dir_topo": 2.7,
+      "cerca_poste1_base": 2.5,
+      "cerca_poste1_topo": 1.6,
+      "cerca_poste2_base": 4.5,
+      "cerca_poste2_topo": 4.2,
+      "pessoa_pes": 0.7,
+      "pessoa_cabeca": 1.4,
+      "meiofio_esq": 3.4,
+      "meiofio_dir": 3.5
+    }
+  },
+  "A": {
+    "medio": 5.82,
+    "max": 13.3,
+    "por_ponto": {
+      "g1_topo_esq": 12.5,
+      "g1_faixa_branca_esq": 2.5,
+      "g1_base_esq": 0.9,
+      "anexo_topo_esq": 4.5,
+      "adm_frente_esq_topo": 4.2,
+      "adm_frente_esq_base": 1.4,
+      "adm_fundo_esq_topo": 13.3,
+      "torre_esq_topo": 2.6,
+      "torre_esq_base": 8.7,
+      "torre_dir_topo": 7.6
+    }
+  },
+  "C": {
+    "medio": 3.52,
+    "max": 6.2,
+    "por_ponto": {
+      "g1_topo_esq": 1.5,
+      "g1_topo_dir": 2.1,
+      "g1_base_esq": 4.4,
+      "anexo_topo_esq": 2.1,
+      "adm_frente_esq_topo": 4.4,
+      "adm_frente_esq_base": 5.2,
+      "adm_frente_dir_topo": 6.2,
+      "adm_frente_dir_base": 3.1,
+      "torre_esq_topo": 5.5,
+      "torre_esq_base": 3.9,
+      "torre_dir_topo": 4.3,
+      "g2_frente_dir_topo": 1.0,
+      "g2_frente_dir_base": 2.0
+    }
+  }
+}

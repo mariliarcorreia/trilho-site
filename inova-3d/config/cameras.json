@@ -1,0 +1,44 @@
+{
+  "_leia_me": "Cameras externas. As tres cameras de validacao (CAM_A, CAM_B, CAM_C) sao lidas de config/calibracao.json, gerado por ferramentas/calibrar_cameras.py a partir das fotos reais. Os movimentos de drone terminam exatamente no enquadramento calibrado da foto correspondente ('final': 'A' | 'B' | 'C'). Posicoes em metros, rotacoes em graus (euler XYZ do Blender: X=90 olha na horizontal, Z=guinada), lente em mm (sensor 36 mm).",
+  "fps": 24,
+  "sensor_mm": 36.0,
+  "resolucao_validacao": [1290, 726],
+  "movimentos": {
+    "MOV_B_aproximacao_frontal": {
+      "descricao": "Drone sobe da altura da avenida e avanca ate o enquadramento frontal baixo (foto B), revelando a fachada por cima do gradil.",
+      "duracao_s": 6.0,
+      "final": "B",
+      "chaves": [
+        {"t": 0.0, "pos": [21.8, -104.0, 2.2], "rot": [89.5, 0.0, 5.7], "lente": 32.0},
+        {"t": 0.5, "pos": [21.8, -84.0, 6.0], "rot": [84.0, 0.2, 5.7], "lente": 35.0}
+      ],
+      "narracao": "abertura: apresentacao da Inova Industrial",
+      "transicao_entrada": "fade do preto 12 quadros",
+      "transicao_saida": "corte seco"
+    },
+    "MOV_C_travelling_avenida": {
+      "descricao": "Travelling lateral sobre a avenida, da esquina da rua lateral ate o enquadramento amplo (foto C), mostrando os dois galpoes e o terreno lateral.",
+      "duracao_s": 6.0,
+      "final": "C",
+      "chaves": [
+        {"t": 0.0, "pos": [-32.0, -92.0, 15.0], "rot": [83.5, 1.0, -16.0], "lente": 25.6},
+        {"t": 0.5, "pos": [-5.0, -91.0, 17.0], "rot": [83.0, 1.8, -5.0], "lente": 25.6}
+      ],
+      "narracao": "contexto: localizacao e estrutura da fabrica",
+      "transicao_entrada": "corte seco",
+      "transicao_saida": "dissolve 12 quadros"
+    },
+    "MOV_A_orbita_descendente": {
+      "descricao": "Orbita descendente vinda do alto (vista do telhado com paineis solares) que fecha no enquadramento obliquo da foto A, com aproximacao de lente.",
+      "duracao_s": 7.0,
+      "final": "A",
+      "chaves": [
+        {"t": 0.0, "pos": [-12.0, -78.0, 82.0], "rot": [48.0, 0.0, -14.0], "lente": 32.0},
+        {"t": 0.5, "pos": [18.0, -86.0, 60.0], "rot": [57.0, 1.5, 4.0], "lente": 44.0}
+      ],
+      "narracao": "sustentabilidade: telhado com energia solar",
+      "transicao_entrada": "dissolve 12 quadros",
+      "transicao_saida": "fade para o preto 12 quadros"
+    }
+  }
+}

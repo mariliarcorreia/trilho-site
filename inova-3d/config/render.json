@@ -1,0 +1,17 @@
+{
+  "_leia_me": "Perfis de renderizacao (Cycles). 'teste' e 'previa' servem para conferir enquadramento e movimento; 'validacao' gera as imagens comparadas com as fotos; 'final' e o master 4K. O dispositivo e escolhido automaticamente (GPU se houver, senao CPU).",
+  "luz": {
+    "sol_elevacao_graus": 64.0,
+    "sol_azimute_graus": -25.0,
+    "sol_intensidade": 6.0,
+    "sol_cor": [1.0, 0.965, 0.92],
+    "ceu_intensidade": 0.035
+  },
+  "cor": {"transformacao": "AgX", "visual": "AgX - Medium High Contrast", "exposicao": -0.35},
+  "perfis": {
+    "teste":     {"resolucao": [640, 360],   "amostras": 16,  "rebatimentos": 4,  "desfoque_movimento": false, "formato": "PNG"},
+    "previa":    {"resolucao": [960, 540],   "amostras": 24,  "rebatimentos": 5,  "desfoque_movimento": false, "formato": "PNG"},
+    "validacao": {"resolucao": [1290, 726],  "amostras": 96,  "rebatimentos": 8,  "desfoque_movimento": false, "formato": "PNG"},
+    "final":     {"resolucao": [3840, 2160], "amostras": 512, "rebatimentos": 12, "desfoque_movimento": true,  "formato": "OPEN_EXR"}
+  }
+}

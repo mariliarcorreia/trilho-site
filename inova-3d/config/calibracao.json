@@ -1,0 +1,137 @@
+{
+  "parametros": {
+    "g1_largura": 35.65,
+    "g1_altura": 10.75,
+    "faixa_branca_alt": 3.18,
+    "anexo_largura": 5.45,
+    "anexo_altura": 3.82,
+    "adm_x0": 19.06,
+    "adm_largura": 18.38,
+    "adm_profundidade": 13.17,
+    "adm_altura": 7.28,
+    "adm_y_fundo": -3.17,
+    "torre_x_rel": 10.35,
+    "torre_largura": 3.7,
+    "torre_altura": 8.12,
+    "torre_avanco": 0.61,
+    "cerca_y": -30.41,
+    "cerca_altura": 2.42,
+    "cerca_px1": 13.34,
+    "cerca_px2": 32.77,
+    "pessoa_x": 25.62,
+    "pessoa_y": -32.37,
+    "meiofio_y": -34.98,
+    "meiofio_x1": 3.18,
+    "meiofio_x2": 32.99,
+    "g2_x_dir": 64.27,
+    "g2_y_frente": 19.16,
+    "g2_altura": 12.01
+  },
+  "cameras": {
+    "B": {
+      "posicao": [
+        21.76,
+        -63.92,
+        11.27
+      ],
+      "rotacao_euler_graus": [
+        78.47,
+        0.3,
+        5.74
+      ],
+      "focal_px": 1341.0,
+      "lente_mm_sensor36": 37.42
+    },
+    "A": {
+      "posicao": [
+        39.65,
+        -81.13,
+        42.9
+      ],
+      "rotacao_euler_graus": [
+        65.27,
+        2.77,
+        18.69
+      ],
+      "focal_px": 2143.7,
+      "lente_mm_sensor36": 59.82
+    },
+    "C": {
+      "posicao": [
+        23.5,
+        -89.49,
+        18.31
+      ],
+      "rotacao_euler_graus": [
+        82.78,
+        2.36,
+        5.3
+      ],
+      "focal_px": 917.4,
+      "lente_mm_sensor36": 25.6
+    }
+  },
+  "erro_px": {
+    "B": {
+      "medio": 4.33,
+      "max": 18.3,
+      "por_ponto": {
+        "g1_topo_esq": 1.2,
+        "g1_topo_dir": 2.0,
+        "g1_faixa_branca_esq": 6.3,
+        "g1_base_esq": 1.4,
+        "anexo_topo_esq": 4.4,
+        "adm_frente_esq_topo": 3.4,
+        "adm_frente_esq_base": 5.8,
+        "adm_frente_dir_topo": 7.6,
+        "adm_frente_dir_base": 18.3,
+        "torre_esq_topo": 10.5,
+        "torre_esq_base": 1.0,
+        "torre_dir_topo": 2.9,
+        "cerca_poste1_base": 2.5,
+        "cerca_poste1_topo": 1.8,
+        "cerca_poste2_base": 4.6,
+        "cerca_poste2_topo": 3.9,
+        "pessoa_pes": 0.9,
+        "pessoa_cabeca": 1.1,
+        "meiofio_esq": 3.6,
+        "meiofio_dir": 3.4
+      }
+    },
+    "A": {
+      "medio": 5.83,
+      "max": 13.3,
+      "por_ponto": {
+        "g1_topo_esq": 12.4,
+        "g1_faixa_branca_esq": 2.4,
+        "g1_base_esq": 1.0,
+        "anexo_topo_esq": 4.7,
+        "adm_frente_esq_topo": 4.2,
+        "adm_frente_esq_base": 1.4,
+        "adm_fundo_esq_topo": 13.3,
+        "torre_esq_topo": 2.6,
+        "torre_esq_base": 8.6,
+        "torre_dir_topo": 7.7
+      }
+    },
+    "C": {
+      "medio": 3.51,
+      "max": 6.2,
+      "por_ponto": {
+        "g1_topo_esq": 1.5,
+        "g1_topo_dir": 2.1,
+        "g1_base_esq": 4.5,
+        "anexo_topo_esq": 2.1,
+        "adm_frente_esq_topo": 4.4,
+        "adm_frente_esq_base": 5.1,
+        "adm_frente_dir_topo": 6.2,
+        "adm_frente_dir_base": 3.0,
+        "torre_esq_topo": 5.5,
+        "torre_esq_base": 3.9,
+        "torre_dir_topo": 4.3,
+        "g2_frente_dir_topo": 1.1,
+        "g2_frente_dir_base": 1.9
+      }
+    }
+  }
+}

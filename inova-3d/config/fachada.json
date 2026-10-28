@@ -1,0 +1,128 @@
+{
+  "_leia_me": "Dimensoes da fachada da Inova Industrial em metros. Origem: canto frontal esquerdo do galpao principal (G1), no piso. X ao longo da avenida (direita de quem olha da rua), Y para dentro do terreno, Z para cima. Cada bloco traz 'fonte' (como a medida foi obtida) e 'confianca' (alta: medida por retroprojecao em 2 ou 3 fotos; media: 1 foto; baixa: estimativa sem referencia direta). Edite os valores e rode novamente o script: a cena e reconstruida sem duplicar objetos.",
+
+  "galpao_principal": {
+    "fonte": "calibracao conjunta A+B+C (config/calibracao.json)",
+    "confianca": "alta para largura/altura; baixa para profundidade (fundo nao aparece em nenhuma foto)",
+    "x0": 0.0, "largura": 35.65, "profundidade": 60.0, "altura_beiral": 10.75,
+    "inclinacao_telhado_graus": 3.0, "cumeeira_y": 30.0,
+    "_nota_telhado": "Duas aguas com cumeeira paralela a fachada (a fachada frontal e o lado do beiral, com platibanda reta). A foto B mostra os paineis aparecendo acima da platibanda, o que indica telhado subindo a partir da frente.",
+    "faixa_branca_altura": 3.18,
+    "colunas_x": [0.0, 5.46, 10.95, 16.01, 21.35, 26.7, 32.05, 35.45],
+    "colunas_largura": 0.32, "colunas_avanco": 0.12,
+    "nervura_passo": 0.25,
+    "letreiro": {"x0": 1.0, "x1": 9.38, "z0": 7.23, "z1": 9.43, "fonte": "retroprojecao foto B no plano Y=0", "confianca": "alta"},
+    "reservatorio": {"x": 3.3, "y": -1.0, "raio": 0.62, "altura": 2.0, "fonte": "foto B (cilindro metalico junto a parede)", "confianca": "media"}
+  },
+
+  "anexo_lateral": {
+    "fonte": "fotos A, B, C (volume branco baixo a esquerda do galpao)",
+    "confianca": "alta para frente; baixa para profundidade",
+    "x0": -5.45, "x1": 0.0, "y0": 0.0, "y1": 40.0, "altura": 3.82,
+    "veneziana": {"x0": -3.05, "x1": -1.94, "z0": 1.5, "z1": 2.69}
+  },
+
+  "galpao_secundario": {
+    "fonte": "calibracao (canto frontal direito na foto C) e muro de blocos na foto B",
+    "confianca": "media para frente/altura; baixa para largura total e profundidade",
+    "x0": 35.65, "x1": 64.27, "y0": 19.16, "profundidade": 40.0, "altura_beiral": 12.0,
+    "inclinacao_telhado_graus": 5.0, "cumeeira_y": 39.16,
+    "base_blocos_altura": 3.0,
+    "letreiro": {"x0": 55.17, "x1": 62.92, "z0": 8.21, "z1": 10.19, "fonte": "retroprojecao foto C no plano Y=19.16", "confianca": "media"}
+  },
+
+  "paineis_solares": {
+    "fonte": "foto A retroprojetada no plano do telhado do G1; foto C confirma cobertura parcial",
+    "confianca": "media",
+    "_nota": "So foram modelados os blocos visiveis nas referencias. O restante do telhado fica sem paineis ate haver confirmacao.",
+    "modulo_largura": 1.13, "modulo_comprimento": 2.28, "altura_sobre_telhado": 0.12,
+    "blocos": [
+      {"x0": 4.0, "x1": 21.4, "y0": 1.0, "y1": 14.0},
+      {"x0": 22.5, "x1": 35.0, "y0": 1.0, "y1": 14.0},
+      {"x0": 4.0, "x1": 21.4, "y0": 15.5, "y1": 22.5},
+      {"x0": 22.5, "x1": 35.0, "y0": 15.5, "y1": 22.5},
+      {"x0": 4.0, "x1": 21.4, "y0": 24.0, "y1": 29.5},
+      {"x0": 22.5, "x1": 35.0, "y0": 24.0, "y1": 29.5}
+    ]
+  },
+
+  "predio_administrativo": {
+    "fonte": "calibracao A+B+C e retroprojecao da foto B no plano da fachada (Y=-13.17)",
+    "confianca": "alta",
+    "x0": 19.06, "x1": 37.44, "y_frente": -13.17, "y_fundo": 0.0,
+    "altura_parede": 6.38, "beiral_z0": 6.38, "beiral_z1": 7.28, "beiral_avanco": 0.35,
+    "platibanda_fundo_y": -3.17, "platibanda_altura": 0.9,
+    "caixa_cobertura": {"x0": 25.2, "x1": 28.6, "y0": -9.5, "y1": -6.0, "altura": 1.6, "confianca": "media"},
+    "vidro": {
+      "x0": 19.18, "x1": 22.71, "z0": 0.0, "z1": 5.66, "recuo": 0.25,
+      "montantes_x": [20.07, 20.91, 21.78], "travessa_z": 2.95,
+      "_nota": "Fachada envidracada de pe-direito duplo com veiculo visivel atras do vidro nas fotos A e B. Funcao do ambiente (hall ou garagem) a confirmar."
+    },
+    "janelas": [
+      {"x0": 23.45, "x1": 25.70, "z0": 4.65, "z1": 5.81},
+      {"x0": 26.50, "x1": 28.75, "z0": 4.65, "z1": 5.81},
+      {"x0": 33.40, "x1": 35.65, "z0": 4.70, "z1": 5.90},
+      {"x0": 23.40, "x1": 25.70, "z0": 1.62, "z1": 2.58},
+      {"x0": 26.45, "x1": 28.73, "z0": 1.65, "z1": 2.60},
+      {"x0": 33.30, "x1": 35.63, "z0": 1.85, "z1": 2.83}
+    ],
+    "brise_laminas": 6,
+    "torre": {"x0": 29.41, "x1": 33.11, "avanco": 0.61, "altura": 8.12, "juntas_z": [2.7, 5.4],
+              "emblema": {"x": 31.28, "z": 5.69, "raio": 0.82}},
+    "jardineira": {"x0": 22.8, "x1": 29.3, "profundidade": 0.7, "mudas": 9},
+    "calcada_frente": {"y0": -14.6}
+  },
+
+  "terreno": {
+    "fonte": "retroprojecao no piso (fotos B e C)",
+    "confianca": "alta para frente e lateral direita; media para lateral esquerda",
+    "patio": {"x0": -5.5, "x1": 40.4, "y0": -30.41, "y1": 0.0},
+    "cerca": {"y": -30.41, "x0": 1.3, "x1": 40.4, "altura": 2.42, "passo_postes": 2.8,
+              "chanfro_esq": [[1.3, -30.41], [-5.5, -24.0]], "lateral_esq_x": -5.5, "lateral_esq_y1": 0.0,
+              "portao_veiculos": [13.26, 17.44], "portao_pedestres": [17.44, 18.76], "concertina": true},
+    "muro_direito": {"x": 40.4, "y0": -30.41, "y1": 19.16, "altura": 3.0},
+    "muro_fundo_g2": {"y": 19.16, "x0": 64.27, "x1": 73.0, "altura": 3.0},
+    "calcada": {"y0": -34.98, "y1": -30.41},
+    "avenida": {"pista_proxima": [-41.9, -34.98], "canteiro": [-47.3, -41.9], "pista_oposta": [-55.3, -47.3],
+                "faixa_tracejada_y": [-38.44, -51.3], "traco": 4.0, "intervalo": 8.0},
+    "rua_lateral": {"x0": -16.0, "x1": -5.5, "y1": 140.0},
+    "terreno_lateral": {"x0": 40.4, "x1": 85.0, "y0": -17.7, "y1": 19.16, "_nota": "terra vermelha exposta, fotos B e C"},
+    "estacionamento_lateral": {"x0": 41.5, "x1": 72.0, "y0": -31.0, "y1": -17.7, "_nota": "visivel na foto C; propriedade nao confirmada"},
+    "poste": {"x": 13.65, "y": -33.14, "altura": 9.9, "braco": 1.4, "z_luminaria": 7.86}
+  },
+
+  "veiculos": {
+    "fonte": "retroprojecao no piso da foto B, orientacao conferida na foto A",
+    "confianca": "media (posicoes do dia da filmagem; podem ser removidos ou trocados)",
+    "carros": [
+      {"tipo": "picape", "x": 14.9, "y": -15.8, "rot": 0, "cor": "preto"},
+      {"tipo": "picape", "x": 14.8, "y": -6.5, "rot": 0, "cor": "prata"},
+      {"tipo": "sedan", "x": 15.2, "y": -10.9, "rot": 0, "cor": "prata"},
+      {"tipo": "picape_compacta", "x": 21.2, "y": -19.1, "rot": 15, "cor": "branco"},
+      {"tipo": "hatch", "x": 28.5, "y": -18.6, "rot": 90, "cor": "branco"},
+      {"tipo": "picape", "x": 36.0, "y": -16.4, "rot": 78, "cor": "grafite"},
+      {"tipo": "picape", "x": 20.9, "y": -9.6, "rot": 90, "cor": "prata", "_nota": "atras do vidro"}
+    ],
+    "fileiras_motos": [
+      {"x0": 1.0, "x1": 15.5, "y": -2.3, "passo": 0.85, "rot": 90},
+      {"x0": -0.5, "x1": 11.5, "y": -6.6, "passo": 0.9, "rot": 90},
+      {"x0": 3.0, "x1": 13.6, "y": -29.4, "passo": 1.05, "rot": 90},
+      {"x0": 20.6, "x1": 21.6, "y": -29.4, "passo": 1.0, "rot": 90},
+      {"x0": 24.2, "x1": 25.0, "y": -29.4, "passo": 1.0, "rot": 90}
+    ],
+    "bicicletas": {"x0": -4.6, "x1": -0.8, "y": -0.6, "passo": 0.75}
+  },
+
+  "contexto": {
+    "_nota": "Volumes simplificados das construcoes vizinhas que aparecem nas fotos, apenas para dar escala e horizonte. Nao fazem parte da Inova e podem ser desligados.",
+    "ativo": true,
+    "volumes": [
+      {"nome": "galpao_vizinho_esquerda_EFS", "x0": -42, "x1": -17, "y0": -6, "y1": 40, "altura": 7.5, "cor": "concreto"},
+      {"nome": "predio_esquina_esquerda", "x0": -46, "x1": -22, "y0": -28, "y1": -8, "altura": 6.0, "cor": "branco"},
+      {"nome": "galpao_eletrica", "x0": -80, "x1": -22, "y0": 0, "y1": 16, "altura": 7.0, "cor": "branco"},
+      {"nome": "galpao_vizinho_direita", "x0": 82, "x1": 118, "y0": 0, "y1": 40, "altura": 8.0, "cor": "concreto"}
+    ],
+    "carros_rua_lateral": [[-13.3, -14.0], [-13.3, -3.0], [-13.3, 8.0], [-13.3, 27.0]],
+    "torres": []
+  }
+}

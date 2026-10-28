@@ -1,0 +1,194 @@
+{
+  "_descricao": "Pontos marcados manualmente nas tres fotos reais (recortes 1290x726 em referencias/fotos_drone). Cada ponto liga um pixel da foto a um ponto do modelo parametrico (ver ferramentas/calibrar_cameras.py). Erro de marcacao estimado: 3 a 8 px.",
+  "_sistema_de_coordenadas": "X ao longo da avenida (positivo para a direita de quem olha da rua), Y para dentro do terreno (positivo afastando da avenida), Z para cima. Origem: canto frontal esquerdo do galpao principal, no nivel do piso.",
+  "imagens": {
+    "B": "referencias/fotos_drone/ref_B_frontal_baixa.png",
+    "A": "referencias/fotos_drone/ref_A_aerea_obliqua.png",
+    "C": "referencias/fotos_drone/ref_C_frontal_ampla.png"
+  },
+  "resolucao": [
+    1290,
+    726
+  ],
+  "pontos": {
+    "B": {
+      "g1_topo_esq": [
+        327,
+        103
+      ],
+      "g1_topo_dir": [
+        1088,
+        97
+      ],
+      "g1_faixa_branca_esq": [
+        330,
+        257
+      ],
+      "g1_base_esq": [
+        338,
+        322
+      ],
+      "anexo_topo_esq": [
+        232,
+        248
+      ],
+      "adm_frente_esq_topo": [
+        712,
+        198
+      ],
+      "adm_frente_esq_base": [
+        712,
+        390
+      ],
+      "adm_frente_dir_topo": [
+        1207,
+        200
+      ],
+      "adm_frente_dir_base": [
+        1215,
+        385
+      ],
+      "torre_esq_topo": [
+        982,
+        177
+      ],
+      "torre_esq_base": [
+        982,
+        393
+      ],
+      "torre_dir_topo": [
+        1100,
+        177
+      ],
+      "cerca_poste1_base": [
+        457,
+        520
+      ],
+      "cerca_poste1_topo": [
+        457,
+        433
+      ],
+      "cerca_poste2_base": [
+        1218,
+        545
+      ],
+      "cerca_poste2_topo": [
+        1218,
+        450
+      ],
+      "pessoa_pes": [
+        935,
+        560
+      ],
+      "pessoa_cabeca": [
+        937,
+        494
+      ],
+      "meiofio_esq": [
+        0,
+        567
+      ],
+      "meiofio_dir": [
+        1290,
+        615
+      ]
+    },
+    "A": {
+      "g1_topo_esq": [
+        432,
+        187
+      ],
+      "g1_faixa_branca_esq": [
+        436,
+        345
+      ],
+      "g1_base_esq": [
+        440,
+        405
+      ],
+      "anexo_topo_esq": [
+        322,
+        318
+      ],
+      "adm_frente_esq_topo": [
+        757,
+        432
+      ],
+      "adm_frente_esq_base": [
+        758,
+        602
+      ],
+      "adm_fundo_esq_topo": [
+        808,
+        320
+      ],
+      "torre_esq_topo": [
+        1030,
+        450
+      ],
+      "torre_esq_base": [
+        1030,
+        652
+      ],
+      "torre_dir_topo": [
+        1135,
+        452
+      ]
+    },
+    "C": {
+      "g1_topo_esq": [
+        498,
+        330
+      ],
+      "g1_topo_dir": [
+        862,
+        318
+      ],
+      "g1_base_esq": [
+        500,
+        438
+      ],
+      "anexo_topo_esq": [
+        450,
+        398
+      ],
+      "adm_frente_esq_topo": [
+        678,
+        375
+      ],
+      "adm_frente_esq_base": [
+        680,
+        460
+      ],
+      "adm_frente_dir_topo": [
+        900,
+        375
+      ],
+      "adm_frente_dir_base": [
+        905,
+        455
+      ],
+      "torre_esq_topo": [
+        812,
+        365
+      ],
+      "torre_esq_base": [
+        812,
+        460
+      ],
+      "torre_dir_topo": [
+        855,
+        367
+      ],
+      "g2_frente_dir_topo": [
+        1092,
+        284
+      ],
+      "g2_frente_dir_base": [
+        1092,
+        387
+      ]
+    }
+  },
+  "_observacao": "O ponto adm_fundo_esq_topo foi removido da foto B: a quina lateral do beiral nao e identificavel com seguranca nesse angulo (erro de 25 a 29 px em todas as tentativas)."
+}
