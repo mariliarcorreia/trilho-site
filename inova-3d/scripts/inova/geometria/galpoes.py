@@ -35,6 +35,17 @@ def _telhado_duas_aguas(nome, col, x0, x1, y0, y1, z_beiral, y_cumeeira, inclina
     return z_cume, t
 
 
+def _paredes(nome, col, x0, x1, y0, y1, h, mat, e=0.2):
+    """Quatro paredes sem tampa, para o telhado ficar visivel atras da platibanda."""
+    pecas = [
+        cena.caixa(f"{nome}_frente", col, x0, x1, y0, y0 + e, 0.0, h, mat),
+        cena.caixa(f"{nome}_fundo", col, x0, x1, y1 - e, y1, 0.0, h, mat),
+        cena.caixa(f"{nome}_esq", col, x0, x0 + e, y0, y1, 0.0, h, mat),
+        cena.caixa(f"{nome}_dir", col, x1 - e, x1, y0, y1, 0.0, h, mat),
+    ]
+    return cena.juntar(nome, pecas)
+
+
 def construir_galpao_principal(cfg, col):
     g = cfg["galpao_principal"]
     W, D, H = g["largura"], g["profundidade"], g["altura_beiral"]
@@ -42,7 +53,7 @@ def construir_galpao_principal(cfg, col):
     fb = g["faixa_branca_altura"]
 
     # casca metalica e faixa inferior em alvenaria branca (frente e lateral direita visivel)
-    cena.caixa("G1_casca", col, x0, x0 + W, 0.0, D, 0.0, H, M("metal_fachada"))
+    _paredes("G1_casca", col, x0, x0 + W, 0.0, D, H, M("metal_fachada"))
     cena.caixa("G1_faixa_branca_frente", col, x0, x0 + W, -0.08, 0.0, 0.0, fb, M("alvenaria_branca"))
     cena.caixa("G1_faixa_branca_dir", col, x0 + W, x0 + W + 0.08, 0.0, D, 0.0, fb, M("alvenaria_branca"))
     cena.caixa("G1_rufo_frente", col, x0 - 0.05, x0 + W + 0.05, -0.12, 0.05, H - 0.12, H + 0.05, M("cinza_acm"))
@@ -55,7 +66,7 @@ def construir_galpao_principal(cfg, col):
                                 0.0, fb, M("pintura_grafite")))
     cena.juntar("G1_colunas", pecas)
 
-    _telhado_duas_aguas("G1_telhado", col, x0, x0 + W, 0.0, D, H - 0.1, g["cumeeira_y"],
+    _telhado_duas_aguas("G1_telhado", col, x0, x0 + W, 0.0, D, H - g["platibanda"], g["cumeeira_y"],
                         g["inclinacao_telhado_graus"], M("telhado_metalico"), M("metal_fachada"))
 
     # letreiro oficial (variante de fachada da logomarca, sem alteracao de desenho)
@@ -92,7 +103,7 @@ def construir_galpao_secundario(cfg, col):
     x0, x1, y0 = g["x0"], g["x1"], g["y0"]
     y1 = y0 + g["profundidade"]
     H = g["altura_beiral"]
-    cena.caixa("G2_casca", col, x0, x1, y0, y1, 0.0, H, M("metal_fachada"))
+    _paredes("G2_casca", col, x0, x1, y0, y1, H, M("metal_fachada"))
     cena.caixa("G2_base_blocos", col, x0, x1, y0 - 0.1, y0, 0.0, g["base_blocos_altura"], M("bloco_concreto"))
     cena.caixa("G2_rufo_frente", col, x0 - 0.05, x1 + 0.05, y0 - 0.12, y0 + 0.05, H - 0.12, H + 0.05, M("cinza_acm"))
     _telhado_duas_aguas("G2_telhado", col, x0, x1, y0, y1, H - 0.1, g["cumeeira_y"], g["inclinacao_telhado_graus"],
@@ -108,7 +119,7 @@ def construir_paineis(cfg, col):
     g = cfg["galpao_principal"]
     p = cfg["paineis_solares"]
     t = math.tan(math.radians(g["inclinacao_telhado_graus"]))
-    z_beiral = g["altura_beiral"] - 0.1 + 0.12  # topo da telha
+    z_beiral = g["altura_beiral"] - g["platibanda"] + 0.12  # topo da telha
     pecas = []
     for i, b in enumerate(p["blocos"]):
         def z(yy):

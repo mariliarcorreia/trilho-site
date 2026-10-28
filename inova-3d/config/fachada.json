@@ -5,7 +5,7 @@
     "fonte": "calibracao conjunta A+B+C (config/calibracao.json)",
     "confianca": "alta para largura/altura; baixa para profundidade (fundo nao aparece em nenhuma foto)",
     "x0": 0.0, "largura": 35.65, "profundidade": 60.0, "altura_beiral": 10.75,
-    "inclinacao_telhado_graus": 3.0, "cumeeira_y": 30.0,
+    "inclinacao_telhado_graus": 2.0, "cumeeira_y": 30.0, "platibanda": 0.6,
     "_nota_telhado": "Duas aguas com cumeeira paralela a fachada (a fachada frontal e o lado do beiral, com platibanda reta). A foto B mostra os paineis aparecendo acima da platibanda, o que indica telhado subindo a partir da frente.",
     "faixa_branca_altura": 3.18,
     "colunas_x": [0.0, 5.46, 10.95, 16.01, 21.35, 26.7, 32.05, 35.45],
@@ -106,9 +106,9 @@
     "fileiras_motos": [
       {"x0": 1.0, "x1": 15.5, "y": -2.3, "passo": 0.85, "rot": 90},
       {"x0": -0.5, "x1": 11.5, "y": -6.6, "passo": 0.9, "rot": 90},
-      {"x0": 3.0, "x1": 13.6, "y": -29.4, "passo": 1.05, "rot": 90},
-      {"x0": 20.6, "x1": 21.6, "y": -29.4, "passo": 1.0, "rot": 90},
-      {"x0": 24.2, "x1": 25.0, "y": -29.4, "passo": 1.0, "rot": 90}
+      {"x0": 3.0, "x1": 13.6, "y": -28.9, "passo": 1.05, "rot": 90},
+      {"x0": 20.6, "x1": 21.6, "y": -28.9, "passo": 1.0, "rot": 90},
+      {"x0": 24.2, "x1": 25.0, "y": -28.9, "passo": 1.0, "rot": 90}
     ],
     "bicicletas": {"x0": -4.6, "x1": -0.8, "y": -0.6, "passo": 0.75}
   },
