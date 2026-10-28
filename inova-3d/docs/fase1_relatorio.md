@@ -42,7 +42,13 @@ A escala absoluta depende de três âncoras (pessoa na calçada, altura do gradi
 
 Valores de `saida/comparacao/metricas.json` (distância entre contornos da foto e do render):
 
-METRICAS
+| Vista | Mediana foto→render | Bordas da foto a até 5 px | a até 10 px | Mediana render→foto | v01 (antes dos ajustes) foto→render |
+|---|---|---|---|---|---|
+| A | 3.2 px | 62% | 78% | 3.0 px | 3.2 px |
+| B | 3.0 px | 60% | 75% | 3.0 px | 3.6 px |
+| C | 4.1 px | 54% | 65% | 3.2 px | 12.0 px |
+
+Reprojeção dos 43 pontos marcados pelas câmeras do Blender: 5,8 px (A), 4,4 px (B), 3,5 px (C) de erro médio, em imagens de 1290 x 726.
 
 Na foto C, parte das bordas da foto vem do bairro ao fundo e dos prédios vizinhos, que só estão representados de forma genérica. Por isso a métrica foto para render é mais alta nessa vista, mesmo com os volumes da Inova alinhados.
 

@@ -196,13 +196,14 @@ def construir_horizonte(cfg):
             vv.co.z = 3.2 + 1.6 * (1 - abs(vv.co.x) / 4.4)
     rng = random.Random(hz["semente"])
     y0, y1 = hz["excluir_faixa_y"]
+    rx0, rx1, ry0, ry1 = hz.get("excluir_retangulo", (0, 0, 0, 0))
 
     def ponto():
         while True:
             ang = rng.uniform(0, 2 * math.pi)
             r = math.sqrt(rng.uniform(hz["raio_min"] ** 2, hz["raio_max"] ** 2))
             x, y = 20 + r * math.cos(ang), 20 + r * math.sin(ang)
-            if not (y0 < y < y1):
+            if not (y0 < y < y1) and not (rx0 < x < rx1 and ry0 < y < ry1):
                 return x, y
 
     for i in range(hz["arvores"]):

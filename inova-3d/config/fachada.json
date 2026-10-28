@@ -129,7 +129,8 @@
       "ativo": true, "semente": 5,
       "arvores": 4000, "casas": 2600,
       "raio_min": 110.0, "raio_max": 1300.0,
-      "excluir_faixa_y": [-75.0, -25.0]
+      "excluir_faixa_y": [-75.0, -25.0],
+      "excluir_retangulo": [-220.0, 260.0, -170.0, -20.0]
     }
   }
 }
