@@ -137,3 +137,7 @@ Para editar: abra `cenas/fachada_v01.blend` no Blender, ou altere `config/fachad
 2. `python ferramentas/comparar.py` gera, para cada câmera, lado a lado, cortina (metade foto, metade render), mescla 50% e mapa de bordas (vermelho = só na foto, ciano = só no render, branco = coincidem), além de `metricas.json` com a distância entre contornos.
 3. O arquivo `saida/validacao/verificacao_cameras_blender.json` confirma que as câmeras do Blender reproduzem a calibração (erro de reprojeção dos pontos marcados).
 4. As diferenças encontradas e as pendências ficam registradas em `docs/fase1_relatorio.md`.
+
+## Verificação de reexecução
+
+Teste feito na fase 1: construir a cena três vezes seguidas no mesmo processo, e reabrir `cenas/fachada_v01.blend` e reconstruir por cima, resultou sempre nas mesmas contagens (6.978 objetos, 292 malhas, 43 materiais, 31 coleções). Os objetos são quase todos instâncias (árvores, casas, motos, carros), o que mantém a cena leve.
