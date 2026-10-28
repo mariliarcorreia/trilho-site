@@ -57,5 +57,154 @@
       "desfoque_movimento": true,
       "formato": "OPEN_EXR"
     }
+  },
+  "estilos": {
+    "_leia_me": "Cada estilo substitui 'luz' e 'cor' e pode recolorir materiais (lista de cores: duas para materiais com variacao, uma para materiais lisos). Use --estilo no run.py.",
+    "documental": {},
+    "animacao": {
+      "_nota": "Linguagem da referencia Arroz Vasconcelos: sol baixo e quente, ceu azul saturado, vegetacao verde viva, cores limpas.",
+      "luz": {
+        "sol_elevacao_graus": 32.0,
+        "sol_azimute_graus": -62.0,
+        "sol_intensidade": 5.6,
+        "sol_cor": [
+          1.0,
+          0.78,
+          0.55
+        ],
+        "ceu_intensidade": 0.32,
+        "ceu_gradiente": [
+          [
+            0.02,
+            0.1,
+            0.48
+          ],
+          [
+            0.18,
+            0.42,
+            0.85
+          ]
+        ],
+        "nuvens": true,
+        "ceu_brilho_camera": 0.75
+      },
+      "cor": {
+        "transformacao": "AgX",
+        "visual": "AgX - Punchy",
+        "exposicao": -0.25
+      },
+      "materiais": {
+        "terreno_distante": [
+          [
+            0.09,
+            0.28,
+            0.05
+          ],
+          [
+            0.18,
+            0.38,
+            0.07
+          ]
+        ],
+        "grama_seca": [
+          [
+            0.12,
+            0.36,
+            0.06
+          ],
+          [
+            0.22,
+            0.46,
+            0.09
+          ]
+        ],
+        "calcada": [
+          [
+            0.58,
+            0.53,
+            0.47
+          ],
+          [
+            0.68,
+            0.63,
+            0.57
+          ]
+        ],
+        "terra_vermelha": [
+          [
+            0.62,
+            0.27,
+            0.11
+          ],
+          [
+            0.72,
+            0.36,
+            0.17
+          ]
+        ],
+        "asfalto": [
+          [
+            0.07,
+            0.07,
+            0.08
+          ],
+          [
+            0.11,
+            0.11,
+            0.12
+          ]
+        ],
+        "patio": [
+          [
+            0.17,
+            0.17,
+            0.18
+          ],
+          [
+            0.23,
+            0.23,
+            0.24
+          ]
+        ],
+        "metal_fachada": [
+          [
+            0.72,
+            0.74,
+            0.77
+          ],
+          [
+            0.8,
+            0.82,
+            0.85
+          ]
+        ],
+        "copa_arvore": [
+          [
+            0.05,
+            0.26,
+            0.04
+          ]
+        ],
+        "telha_ceramica": [
+          [
+            0.55,
+            0.18,
+            0.08
+          ]
+        ],
+        "alvenaria_branca": [
+          [
+            0.9,
+            0.9,
+            0.88
+          ],
+          [
+            0.95,
+            0.95,
+            0.93
+          ]
+        ]
+      }
+    }
   }
 }

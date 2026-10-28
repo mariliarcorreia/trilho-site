@@ -339,3 +339,22 @@ def obter(nome):
 
 def reiniciar_cache():
     _cache.clear()
+
+
+def aplicar_paleta(cores_por_material):
+    """Recolore materiais ja construidos (estilos de direcao de arte).
+
+    Materiais com variacao (no Mix RGBA) recebem duas cores; materiais lisos, uma.
+    """
+    for nome, cores in cores_por_material.items():
+        mat = bpy.data.materials.get(nome)
+        if mat is None or mat.node_tree is None:
+            continue
+        mixes = [n for n in mat.node_tree.nodes if n.bl_idname == "ShaderNodeMix" and n.data_type == "RGBA"]
+        if mixes and len(cores) >= 2:
+            mixes[0].inputs["A"].default_value = (*cores[0], 1)
+            mixes[0].inputs["B"].default_value = (*cores[1], 1)
+        else:
+            for n in mat.node_tree.nodes:
+                if n.bl_idname == "ShaderNodeBsdfPrincipled" and not n.inputs["Base Color"].is_linked:
+                    n.inputs["Base Color"].default_value = (*cores[0], 1)

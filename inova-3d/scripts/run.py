@@ -48,6 +48,8 @@ def _args():
     ap.add_argument("--passo", type=int, default=1, help="renderiza 1 a cada N quadros (previa rapida)")
     ap.add_argument("--salvar", default=None, help="caminho do .blend a salvar")
     ap.add_argument("--sem-contexto", action="store_true", help="omite volumes vizinhos")
+    ap.add_argument("--estilo", default="documental", help="documental (fiel as fotos) | animacao (linguagem Vasconcelos)")
+    ap.add_argument("--saida-sufixo", default="", help="sufixo nos nomes dos renders de validacao")
     return ap.parse_args(argv)
 
 
@@ -64,7 +66,7 @@ def _preparar_blender():
             bpy.data.objects.remove(obj, do_unlink=True)
 
 
-def construir_cena(sem_contexto=False):
+def construir_cena(sem_contexto=False, estilo="documental"):
     t0 = time.time()
     biblioteca.reiniciar_cache()
     fachada = config.carregar("fachada")
@@ -73,6 +75,10 @@ def construir_cena(sem_contexto=False):
     calib = config.carregar("calibracao")
     cfg_cam = config.carregar("cameras")
     cfg_render = config.carregar("render")
+    est = cfg_render.get("estilos", {}).get(estilo, {})
+    for chave in ("luz", "cor"):
+        if chave in est:
+            cfg_render[chave] = est[chave]
 
     galpoes.construir(fachada)
     administrativo.construir(fachada)
@@ -81,6 +87,7 @@ def construir_cena(sem_contexto=False):
     veiculos.construir_contexto(fachada, modelos)
     veiculos.construir_horizonte(fachada)
     externa.construir(cfg_render["luz"])
+    biblioteca.aplicar_paleta(est.get("materiais", {}))
     cams_val = externas.construir_validacao(cfg_cam, calib)
     cams_mov = externas.construir_movimentos(cfg_cam, calib)
     cena.purgar_orfaos()
@@ -97,7 +104,7 @@ def construir_cena(sem_contexto=False):
 def main():
     a = _args()
     _preparar_blender()
-    fachada, calib, cfg_cam, cfg_render, cams_val, cams_mov = construir_cena(a.sem_contexto)
+    fachada, calib, cfg_cam, cfg_render, cams_val, cams_mov = construir_cena(a.sem_contexto, a.estilo)
 
     rel = externas.verificar_projecao(cams_val, calib, cfg_cam["resolucao_validacao"])
     os.makedirs(os.path.join(config.SAIDA, "validacao"), exist_ok=True)
@@ -110,7 +117,7 @@ def main():
         print(f"[inova] render de validacao em {disp}")
         for chave in a.cameras.split(","):
             t0 = time.time()
-            arq = os.path.join(config.SAIDA, "validacao", f"render_{chave}.png")
+            arq = os.path.join(config.SAIDA, "validacao", f"render_{chave}{a.saida_sufixo}.png")
             perfis.still(cams_val[chave], arq)
             print(f"[inova] {arq} ({time.time() - t0:.0f}s)")
 
