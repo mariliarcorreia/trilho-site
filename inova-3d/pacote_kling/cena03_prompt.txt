@@ -1,0 +1,7 @@
+CENA 3 | Apresentador dando boas-vindas | duração: 10 s
+
+PROMPT (copie e cole no Kling):
+Pixar-style 3D animation. The friendly safety technician smiles warmly and talks to the camera with natural, expressive mouth movement, as if welcoming a new employee. He opens his right arm in a welcoming gesture, then brings the hand back slightly and gestures again while talking, nods gently and blinks naturally. Subtle breathing, warm golden factory light, soft dust particles in the air. The camera slowly pushes in toward him. Keep his face, glasses, white helmet, light blue shirt, badge and all logos exactly as in the image.
+
+PROMPT NEGATIVO (campo "Negative prompt", se aparecer):
+distorted logo, changing logo, text, extra fingers, deformed hands, face morphing, blurry face, flicker
