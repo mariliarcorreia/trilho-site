@@ -1,0 +1,144 @@
+{
+  "nome": "c03_apresentador_boas_vindas",
+  "imagem": "cenas_pixar/originais/c03_apresentador.png",
+  "duracao_s": 8.0,
+  "logos": [
+    {
+      "local": "capacete",
+      "variante": "icone",
+      "centro": [
+        772,
+        100
+      ],
+      "largura": 50
+    },
+    {
+      "local": "bolso",
+      "variante": "completa",
+      "centro": [
+        957,
+        642
+      ],
+      "largura": 86
+    },
+    {
+      "local": "cracha",
+      "variante": "completa",
+      "centro": [
+        848,
+        766
+      ],
+      "largura": 56
+    }
+  ],
+  "rig": {
+    "respiracao": {
+      "cintura_y": 880,
+      "amplitude": 0.006,
+      "periodo": 3.6
+    },
+    "cabeca": {
+      "pivo": [
+        790,
+        430
+      ],
+      "giro_graus": 1.4,
+      "periodo": 4.2,
+      "aceno_px": 2.5,
+      "regiao": {
+        "caixa": [
+          590,
+          0,
+          1010,
+          405
+        ],
+        "borda": 45
+      }
+    },
+    "boca": {
+      "centro": [
+        797,
+        388
+      ],
+      "raio": [
+        78,
+        48
+      ],
+      "linha_labio_y": 336,
+      "abertura_px": 6
+    },
+    "braco": {
+      "pivo": [
+        655,
+        565
+      ],
+      "giro_graus": 2.4,
+      "periodo": 2.6,
+      "regiao": {
+        "caixa": [
+          330,
+          560,
+          600,
+          880
+        ],
+        "borda": 45
+      }
+    },
+    "olhos": [
+      {
+        "elipse": [
+          737,
+          242,
+          34,
+          20
+        ],
+        "amostra_pele": [
+          735,
+          282
+        ]
+      },
+      {
+        "elipse": [
+          836,
+          234,
+          32,
+          21
+        ],
+        "amostra_pele": [
+          836,
+          276
+        ]
+      }
+    ],
+    "piscadas_s": [
+      1.4,
+      4.3,
+      6.8
+    ],
+    "fala": {
+      "intervalo": [
+        0.6,
+        7.2
+      ]
+    }
+  },
+  "camera": {
+    "centro_inicio": [
+      840,
+      472
+    ],
+    "centro_fim": [
+      810,
+      420
+    ],
+    "zoom_inicio": 1.0,
+    "zoom_fim": 1.08,
+    "paralaxe_fundo": 0.5
+  },
+  "particulas": 70,
+  "legenda": {
+    "texto": "Mais do que fabricar equipamentos, nós damos vida a projetos e transformamos desafios em soluções de alta performance.",
+    "inicio": 0.5,
+    "fim": 7.6
+  }
+}

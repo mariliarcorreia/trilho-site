@@ -3,3 +3,4 @@ saida/previas/*/
 # arquivos temporarios do Blender
 *.blend1
 __pycache__/
+saida/animacao/*/quadros/
