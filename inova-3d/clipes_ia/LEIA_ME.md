@@ -8,3 +8,4 @@ O áudio dos clipes é descartado. O selo "Ai" do canto superior esquerdo é rem
 | 3 | c03_apresentador_v1.mov | aprovado pela cliente |
 | 10 | c10_apresentador_joinha_v1.mov | aprovado na conferência |
 | 11 | c11_boas_vindas_v1.mov | animação aprovada; logos das camisas distorcidas pela IA: substituir pela logo oficial com rastreamento na edição |
+| 16 | c16_epis_v1.mov | animação aprovada; logo do bolso distorcida (INOUR): substituir na edição |
