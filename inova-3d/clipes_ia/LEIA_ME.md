@@ -15,3 +15,4 @@ O áudio dos clipes é descartado. O selo "Ai" do canto superior esquerdo é rem
 | 7 | c07_dedo_levantado_v1.mov | aprovado (Seedance 1.5 Pro; 2.0 Mini barra o rosto do apresentador) |
 | 14 | c14_apontando_v1.mov | aprovado |
 | 15 | c15_seguranca_v1.mov | aprovado |
+| 19 | c19_mao_no_peito_v1.mov | aprovado |
