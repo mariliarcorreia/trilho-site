@@ -101,5 +101,87 @@
       ],
       "largura": 80
     }
+  ],
+  "c04_soldador": [
+    {
+      "variante": "icone",
+      "centro": [
+        765,
+        100
+      ],
+      "largura": 40
+    }
+  ],
+  "c09_qualidade": [
+    {
+      "variante": "icone",
+      "centro": [
+        612,
+        62
+      ],
+      "largura": 80
+    }
+  ],
+  "c05_frigorifico": [
+    {
+      "variante": "icone",
+      "centro": [
+        1310,
+        200
+      ],
+      "largura": 75
+    },
+    {
+      "variante": "completa",
+      "centro": [
+        575,
+        280
+      ],
+      "largura": 150
+    }
+  ],
+  "c12_harmonia": [
+    {
+      "variante": "icone",
+      "centro": [
+        400,
+        175
+      ],
+      "largura": 60
+    },
+    {
+      "variante": "icone",
+      "centro": [
+        1120,
+        95
+      ],
+      "largura": 60
+    },
+    {
+      "variante": "completa",
+      "centro": [
+        1205,
+        550
+      ],
+      "largura": 55
+    }
+  ],
+  "c20_caminhada": [
+    {
+      "variante": "icone",
+      "centro": [
+        745,
+        75
+      ],
+      "largura": 40
+    },
+    {
+      "variante": "completa_escura",
+      "centro": [
+        795,
+        300
+      ],
+      "largura": 55
+    }
   ]
 }
