@@ -56,6 +56,16 @@
       "rebatimentos": 12,
       "desfoque_movimento": true,
       "formato": "OPEN_EXR"
+    },
+    "imagem_ia": {
+      "resolucao": [
+        1920,
+        1080
+      ],
+      "amostras": 64,
+      "rebatimentos": 6,
+      "desfoque_movimento": false,
+      "formato": "PNG"
     }
   },
   "estilos": {
