@@ -1,0 +1,110 @@
+{
+  "c10_apresentador_joinha": [
+    {
+      "variante": "icone",
+      "centro": [
+        747,
+        75
+      ],
+      "largura": 50
+    },
+    {
+      "variante": "completa",
+      "centro": [
+        933,
+        575
+      ],
+      "largura": 82
+    },
+    {
+      "variante": "completa",
+      "centro": [
+        816,
+        748
+      ],
+      "largura": 52
+    }
+  ],
+  "c11_boas_vindas": [
+    {
+      "variante": "completa",
+      "centro": [
+        236,
+        360
+      ],
+      "largura": 46
+    },
+    {
+      "variante": "completa",
+      "centro": [
+        362,
+        348
+      ],
+      "largura": 42
+    },
+    {
+      "variante": "completa",
+      "centro": [
+        662,
+        322
+      ],
+      "largura": 46
+    },
+    {
+      "variante": "completa_escura",
+      "centro": [
+        962,
+        348
+      ],
+      "largura": 46
+    }
+  ],
+  "c16_epis": [
+    {
+      "variante": "icone",
+      "centro": [
+        1310,
+        690
+      ],
+      "largura": 100,
+      "rotacao": -6
+    },
+    {
+      "variante": "completa_escura",
+      "centro": [
+        1003,
+        500
+      ],
+      "largura": 82
+    }
+  ],
+  "c17_faixa_seguranca": [
+    {
+      "variante": "icone",
+      "centro": [
+        588,
+        93
+      ],
+      "largura": 38
+    }
+  ],
+  "c18_cuidado": [
+    {
+      "variante": "icone",
+      "centro": [
+        500,
+        150
+      ],
+      "largura": 72,
+      "rotacao": -8
+    },
+    {
+      "variante": "icone",
+      "centro": [
+        1095,
+        82
+      ],
+      "largura": 80
+    }
+  ]
+}

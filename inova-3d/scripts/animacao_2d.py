@@ -30,7 +30,8 @@ W_SAIDA, H_SAIDA, FPS = 1920, 1080, 24
 # --- logomarca ----------------------------------------------------------------
 
 def _logo(variante):
-    arq = {"completa": "logo_fachada.png", "icone": "emblema_icone.png"}[variante]
+    arq = {"completa": "logo_fachada.png", "completa_escura": "logo_original_fundo_escuro.png",
+           "icone": "emblema_icone.png"}[variante]
     im = Image.open(os.path.join(RAIZ, "texturas", arq)).convert("RGBA")
     if variante == "icone":
         # mesmo icone da variante de fachada: partes brancas em grafite (regra 4)

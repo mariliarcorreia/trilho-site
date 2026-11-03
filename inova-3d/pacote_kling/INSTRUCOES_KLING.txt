@@ -1,0 +1,47 @@
+PACOTE KLING | INOVA INDUSTRIAL | lote 1
+
+=====================================================================
+CONFIGURAÇÃO (vale para todas as cenas)
+=====================================================================
+- Image to Video
+- Modelo: a versão mais nova disponível do Kling
+- Modo: Professional (ou "Master"). Evite o modo Standard: ele muda mais o rosto.
+- Duração: 5 s. Clipes curtos mantêm melhor o estilo Pixar. Se precisar de mais tempo, eu junto dois clipes na edição.
+- Proporção: 16:9
+- Se houver o controle "Creativity / Relevance", deixe mais para o lado de "Relevance" (fiel à imagem).
+- Sempre cole também o PROMPT NEGATIVO abaixo, no campo "Negative prompt".
+
+PROMPT NEGATIVO (igual para todas):
+realistic, photorealistic, live action, real person, human skin texture, face change, face morphing, different face, distorted logo, changing logo, text, extra fingers, deformed hands, blurry, flicker
+
+Por que isso: no primeiro teste, o rosto do apresentador saiu do estilo Pixar e ficou parecido com uma pessoa real na metade do vídeo. O modo Professional, a duração de 5 s e o prompt negativo seguram o estilo.
+
+=====================================================================
+CENA 3 | Apresentador dando boas-vindas | arquivo: cena03_apresentador.png
+=====================================================================
+Pixar-style 3D animated film. Keep the exact Pixar cartoon character design from the image during the whole clip: big expressive cartoon eyes, stylized proportions, smooth stylized skin. The friendly safety technician smiles and talks to the camera with clear, expressive mouth movement, welcoming a new employee. He opens his arm in a welcoming gesture and nods gently, blinking naturally. Warm golden factory light, soft dust in the air. Slow camera push-in. Keep the logos on the helmet, pocket and badge unchanged.
+
+=====================================================================
+CENA 10 | Apresentador fazendo joinha | arquivo: c10_apresentador_joinha.png
+=====================================================================
+Pixar-style 3D animated film. Keep the exact Pixar cartoon character design from the image during the whole clip: big expressive cartoon eyes, stylized proportions. The safety technician talks to the camera with confident, expressive mouth movement, gives an enthusiastic thumbs up, nods with pride and finishes with a big smile. Warm golden factory light. Slight camera push-in. Keep the logos on the helmet, pocket and badge unchanged.
+
+=====================================================================
+CENA 11 | Equipe recebe o novo colaborador | arquivo: c11_boas_vindas.png
+=====================================================================
+Pixar-style 3D animated film. Keep the exact Pixar cartoon character designs from the image during the whole clip. The team leader warmly shakes hands with the young new employee, the coworkers smile and clap their hands, the new employee smiles a little shy and then confident. Warm golden light, cheerful atmosphere. Slow sideways camera move. Keep the logos on the shirts unchanged.
+
+=====================================================================
+CENA 16 | Novo colaborador vestindo os EPIs | arquivo: c16_epis.png
+=====================================================================
+Pixar-style 3D animated film. Keep the exact Pixar cartoon character design from the image during the whole clip: big expressive cartoon eyes, stylized proportions. The young new employee adjusts the red ear muffs on his head, taps the side of his clear safety glasses, looks down at his safety boots and then smiles confidently at the camera. Soft locker room light. Slow camera push-in. Keep the logos on the shirt and helmet unchanged.
+
+=====================================================================
+CENA 17 | Caminhando na faixa de segurança | arquivo: c17_faixa_seguranca.png
+=====================================================================
+Pixar-style 3D animated film. Keep the exact Pixar cartoon character design from the image during the whole clip. The young employee walks forward calmly inside the yellow pedestrian safety lane, looking around attentively, while the orange forklift drives slowly in its own lane in the background. Warm afternoon light through the warehouse door. Camera tracks smoothly alongside him. Keep the helmet logo unchanged.
+
+=====================================================================
+CENA 18 | Colega ajusta os óculos do novo colaborador | arquivo: c18_cuidado.png
+=====================================================================
+Pixar-style 3D animated film. Keep the exact Pixar cartoon character designs from the image during the whole clip: big expressive cartoon eyes, stylized proportions. The experienced coworker gently adjusts the safety glasses of the young employee, both smile warmly, the young man nods thankfully and the older man gives him a friendly pat on the shoulder. Warm golden factory light. Very slow camera push-in. Keep the helmet logos unchanged.
