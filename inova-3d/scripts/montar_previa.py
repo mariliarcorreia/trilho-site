@@ -1,7 +1,7 @@
 """Monta a previa visual do filme (sem narracao), com o texto do roteiro em legenda.
 
 Cada trecho e normalizado para 1920x1080 a 24 fps; dos clipes do CapCut sai a
-marca "Ai" do canto e a borda arredondada. Os trechos sao unidos com fusao curta.
+marca "Ai" do canto e a borda arredondada. Os trechos sao unidos com cortes secos.
 
 Uso: python scripts/montar_previa.py
 Saida: saida/previa_filme_v1.mp4
@@ -58,7 +58,7 @@ def normalizar(i, arq, ini, dur, texto, tmp):
     if arq == "LOGO":
         logo = os.path.join(RAIZ, "texturas", "logo_original_fundo_escuro.png")
         cmd = ["ffmpeg", "-y", "-v", "error", "-f", "lavfi", "-i", f"color=c=0x1d1f21:s=1920x1080:d={dur}:r=24",
-               "-i", logo, "-filter_complex",
+               "-loop", "1", "-i", logo, "-filter_complex",
                "[1]scale=1100:-1,format=rgba,fade=in:st=0.3:d=0.8:alpha=1[l];[0][l]overlay=(W-w)/2:(H-h)/2",
                "-t", str(dur), "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "18", saida]
         subprocess.run(cmd, check=True)
@@ -82,17 +82,16 @@ def normalizar(i, arq, ini, dur, texto, tmp):
 def main():
     tmp = tempfile.mkdtemp(prefix="previa_", dir=os.path.join(RAIZ, "saida"))
     trechos = [normalizar(i, *t, tmp) for i, t in enumerate(LINHA_DO_TEMPO)]
-    entradas, filtro, atual, desloc = [], [], "[0:v]", 0.0
-    for p in trechos:
-        entradas += ["-i", p]
-    for k in range(1, len(trechos)):
-        desloc += LINHA_DO_TEMPO[k - 1][2] - FUSAO
-        rot = f"[v{k}]"
-        filtro.append(f"{atual}[{k}:v]xfade=transition=fade:duration={FUSAO}:offset={desloc:.2f}{rot}")
-        atual = rot
+    # cortes secos (como na referencia), com fade curto so na entrada e na saida do filme
+    lista = os.path.join(tmp, "lista.txt")
+    with open(lista, "w") as fh:
+        for p in trechos:
+            fh.write(f"file '{p}'\n")
+    total = sum(t[2] for t in LINHA_DO_TEMPO)
     saida = os.path.join(RAIZ, "saida", "previa_filme_v1.mp4")
-    cmd = ["ffmpeg", "-y", "-v", "error", *entradas, "-filter_complex", ";".join(filtro), "-map", atual,
-           "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "20", "-preset", "medium", "-movflags", "+faststart", saida]
+    cmd = ["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", lista,
+           "-vf", f"settb=AVTB,setpts=N/24/TB,fps=24,fade=in:st=0:d=0.5,fade=out:st={total - 0.6}:d=0.6",
+           "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "20", "-movflags", "+faststart", saida]
     subprocess.run(cmd, check=True)
     print("ok", saida)
 

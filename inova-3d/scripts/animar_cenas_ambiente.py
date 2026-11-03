@@ -30,6 +30,9 @@ CAMERAS = {
 }
 
 
+SEM_CAMADAS = {"c12_harmonia"}
+
+
 def brilho_inox(img, t):
     """Faixa de reflexo diagonal que atravessa as superficies claras e metalicas."""
     H, W = img.shape[:2]
@@ -49,7 +52,10 @@ def animar(nome):
     pasta = os.path.join(RAIZ, "saida", "animacao", nome)
     os.makedirs(os.path.join(pasta, "quadros"), exist_ok=True)
     alfa = a.recortar(img_path, os.path.join(pasta, "recorte.png"))
-    fundo = a.fundo_sem_personagem(img, alfa)
+    if nome in SEM_CAMADAS:
+        # o recorte separa mal objetos grandes de inox: a cena move inteira
+        alfa = np.ones_like(alfa)
+    fundo = img if nome in SEM_CAMADAS else a.fundo_sem_personagem(img, alfa)
     rgba = np.dstack([img, alfa])
     (c0, c1, z0, z1) = CAMERAS[nome]
     part = a.Particulas(60, W, H, semente=len(nome))
