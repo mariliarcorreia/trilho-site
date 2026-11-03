@@ -1,0 +1,41 @@
+PACOTE CAPCUT | INOVA INDUSTRIAL | lote 1
+
+=====================================================================
+COMO FAZER NO CAPCUT
+=====================================================================
+1. Abra a função de vídeo com IA a partir de imagem ("Imagem para vídeo" / "AI video").
+2. Suba a imagem da cena.
+3. Cole o texto da cena (abaixo) inteiro na caixa de descrição. O texto já inclui a ordem para manter o rosto em estilo Pixar, porque o CapCut não tem campo de prompt negativo.
+4. Se der para escolher o modelo, escolha o de maior qualidade. Se der para escolher a duração, use 5 s.
+5. Se houver opção de resolução, escolha 1080p.
+6. Gere, baixe e me mande aqui. Se o rosto mudar de estilo, gere de novo: cada tentativa sai diferente.
+
+=====================================================================
+CENA 3 | Apresentador dando boas-vindas | arquivo: cena03_apresentador.png
+=====================================================================
+Pixar-style 3D animated film. Keep the exact Pixar cartoon character design from the image during the whole clip: big expressive cartoon eyes, stylized proportions, smooth stylized skin. The friendly safety technician smiles and talks to the camera with clear, expressive mouth movement, welcoming a new employee. He opens his arm in a welcoming gesture and nods gently, blinking naturally. Warm golden factory light, soft dust in the air. Slow camera push-in. Keep the logos on the helmet, pocket and badge unchanged. Do not make the faces realistic or photorealistic; they must stay cartoon (Pixar style) from the first to the last frame. Do not change the logos.
+
+=====================================================================
+CENA 10 | Apresentador fazendo joinha | arquivo: c10_apresentador_joinha.png
+=====================================================================
+Pixar-style 3D animated film. Keep the exact Pixar cartoon character design from the image during the whole clip: big expressive cartoon eyes, stylized proportions. The safety technician talks to the camera with confident, expressive mouth movement, gives an enthusiastic thumbs up, nods with pride and finishes with a big smile. Warm golden factory light. Slight camera push-in. Keep the logos on the helmet, pocket and badge unchanged. Do not make the faces realistic or photorealistic; they must stay cartoon (Pixar style) from the first to the last frame. Do not change the logos.
+
+=====================================================================
+CENA 11 | Equipe recebe o novo colaborador | arquivo: c11_boas_vindas.png
+=====================================================================
+Pixar-style 3D animated film. Keep the exact Pixar cartoon character designs from the image during the whole clip. The team leader warmly shakes hands with the young new employee, the coworkers smile and clap their hands, the new employee smiles a little shy and then confident. Warm golden light, cheerful atmosphere. Slow sideways camera move. Keep the logos on the shirts unchanged. Do not make the faces realistic or photorealistic; they must stay cartoon (Pixar style) from the first to the last frame. Do not change the logos.
+
+=====================================================================
+CENA 16 | Novo colaborador vestindo os EPIs | arquivo: c16_epis.png
+=====================================================================
+Pixar-style 3D animated film. Keep the exact Pixar cartoon character design from the image during the whole clip: big expressive cartoon eyes, stylized proportions. The young new employee adjusts the red ear muffs on his head, taps the side of his clear safety glasses, looks down at his safety boots and then smiles confidently at the camera. Soft locker room light. Slow camera push-in. Keep the logos on the shirt and helmet unchanged. Do not make the faces realistic or photorealistic; they must stay cartoon (Pixar style) from the first to the last frame. Do not change the logos.
+
+=====================================================================
+CENA 17 | Caminhando na faixa de segurança | arquivo: c17_faixa_seguranca.png
+=====================================================================
+Pixar-style 3D animated film. Keep the exact Pixar cartoon character design from the image during the whole clip. The young employee walks forward calmly inside the yellow pedestrian safety lane, looking around attentively, while the orange forklift drives slowly in its own lane in the background. Warm afternoon light through the warehouse door. Camera tracks smoothly alongside him. Keep the helmet logo unchanged. Do not make the faces realistic or photorealistic; they must stay cartoon (Pixar style) from the first to the last frame. Do not change the logos.
+
+=====================================================================
+CENA 18 | Colega ajusta os óculos do novo colaborador | arquivo: c18_cuidado.png
+=====================================================================
+Pixar-style 3D animated film. Keep the exact Pixar cartoon character designs from the image during the whole clip: big expressive cartoon eyes, stylized proportions. The experienced coworker gently adjusts the safety glasses of the young employee, both smile warmly, the young man nods thankfully and the older man gives him a friendly pat on the shoulder. Warm golden factory light. Very slow camera push-in. Keep the helmet logos unchanged. Do not make the faces realistic or photorealistic; they must stay cartoon (Pixar style) from the first to the last frame. Do not change the logos.
