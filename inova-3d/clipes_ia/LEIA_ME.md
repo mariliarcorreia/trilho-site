@@ -13,3 +13,4 @@ O áudio dos clipes é descartado. O selo "Ai" do canto superior esquerdo é rem
 | 18 | c18_cuidado_v1.mov | aprovado na conferência |
 | 4 | c04_soldador_v1.mov | aprovado; logo do boné: substituir na edição |
 | 7 | c07_dedo_levantado_v1.mov | aprovado (Seedance 1.5 Pro; 2.0 Mini barra o rosto do apresentador) |
+| 14 | c14_apontando_v1.mov | aprovado |
