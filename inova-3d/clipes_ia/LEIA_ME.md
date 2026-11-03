@@ -6,3 +6,4 @@ O áudio dos clipes é descartado. O selo "Ai" do canto superior esquerdo é rem
 | Cena | Arquivo | Status |
 |---|---|---|
 | 3 | c03_apresentador_v1.mov | aprovado pela cliente |
+| 10 | c10_apresentador_joinha_v1.mov | aprovado na conferência |
