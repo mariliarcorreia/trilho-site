@@ -4,3 +4,4 @@ saida/previas/*/
 *.blend1
 __pycache__/
 saida/animacao/*/quadros/
+saida/previa_*/
