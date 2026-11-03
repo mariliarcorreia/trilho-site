@@ -183,5 +183,135 @@
       ],
       "largura": 55
     }
+  ],
+  "c19_mao_no_peito": [
+    {
+      "variante": "icone",
+      "centro": [
+        765,
+        95
+      ],
+      "largura": 50
+    },
+    {
+      "variante": "completa",
+      "centro": [
+        985,
+        610
+      ],
+      "largura": 80
+    },
+    {
+      "variante": "completa",
+      "centro": [
+        835,
+        765
+      ],
+      "largura": 50
+    }
+  ],
+  "c15_seguranca": [
+    {
+      "variante": "icone",
+      "centro": [
+        800,
+        95
+      ],
+      "largura": 50
+    },
+    {
+      "variante": "completa",
+      "centro": [
+        965,
+        635
+      ],
+      "largura": 80
+    },
+    {
+      "variante": "completa",
+      "centro": [
+        855,
+        785
+      ],
+      "largura": 50
+    }
+  ],
+  "c14_apontando": [
+    {
+      "variante": "icone",
+      "centro": [
+        768,
+        88
+      ],
+      "largura": 50
+    },
+    {
+      "variante": "completa",
+      "centro": [
+        955,
+        625
+      ],
+      "largura": 80
+    },
+    {
+      "variante": "completa",
+      "centro": [
+        855,
+        785
+      ],
+      "largura": 50
+    }
+  ],
+  "c07_dedo_levantado": [
+    {
+      "variante": "icone",
+      "centro": [
+        788,
+        78
+      ],
+      "largura": 50
+    },
+    {
+      "variante": "completa",
+      "centro": [
+        915,
+        600
+      ],
+      "largura": 80
+    },
+    {
+      "variante": "completa",
+      "centro": [
+        810,
+        755
+      ],
+      "largura": 50
+    }
+  ],
+  "c08_projeto": [
+    {
+      "variante": "icone",
+      "centro": [
+        400,
+        165
+      ],
+      "largura": 60
+    },
+    {
+      "variante": "completa",
+      "centro": [
+        528,
+        575
+      ],
+      "largura": 58
+    },
+    {
+      "variante": "icone",
+      "centro": [
+        1050,
+        170
+      ],
+      "largura": 60
+    }
   ]
 }
