@@ -16,3 +16,8 @@ O áudio dos clipes é descartado. O selo "Ai" do canto superior esquerdo é rem
 | 14 | c14_apontando_v1.mov | aprovado |
 | 15 | c15_seguranca_v1.mov | aprovado |
 | 19 | c19_mao_no_peito_v1.mov | aprovado |
+| 12 | c12_harmonia_v1.mov | aprovado |
+| 08 | c08_projeto_v1.mov | aprovado |
+| 20 | c20_caminhada_v1.mov | aprovado |
+| 09 | c09_qualidade_v1.mov | aprovado |
+| 05 | c05_frigorifico_v1.mov | aprovado |

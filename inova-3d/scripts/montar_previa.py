@@ -4,7 +4,7 @@ Cada trecho e normalizado para 1920x1080 a 24 fps; dos clipes do CapCut sai a
 marca "Ai" do canto e a borda arredondada. Os trechos sao unidos com cortes secos.
 
 Uso: python scripts/montar_previa.py
-Saida: saida/previa_filme_v1.mp4
+Saida: saida/previa_filme_v2.mp4
 """
 import os
 import subprocess
@@ -19,21 +19,21 @@ LINHA_DO_TEMPO = [
     ("saida/previas/MOV_B_aproximacao_frontal.mp4", 0, 6.0, "Bem-vindo à Inova Industrial."),
     ("clipes_ia/c03_apresentador_v1.mov", 0, 5.0, "Mais do que fabricar equipamentos, nós damos vida a projetos e transformamos desafios em soluções de alta performance."),
     ("clipes_ia/c04_soldador_v1.mov", 0, 5.0, "Cada peça que sai da nossa fábrica carrega o nosso nome e a nossa determinação"),
-    ("saida/animacao/c05_frigorifico.mp4", 0, 5.0, "em ser o melhor suporte para a indústria frigorífica."),
+    ("clipes_ia/c05_frigorifico_v1.mov", 0, 5.0, "em ser o melhor suporte para a indústria frigorífica."),
     ("saida/previas/MOV_A_orbita_descendente.mp4", 0, 5.0, "Nascemos em 2015, mas nossa base foi construída com mais de duas décadas de experiência"),
     ("clipes_ia/c07_dedo_levantado_v1.mov", 0, 5.0, "e um propósito inegociável: a excelência."),
-    ("saida/animacao/c08_projeto.mp4", 0, 5.0, "Ser a parceira mais ágil e assertiva do mercado exige mais do que tecnologia;"),
-    ("saida/animacao/c09_qualidade.mp4", 0, 5.0, "exige olhar para cada detalhe com a responsabilidade de quem sabe que a nossa qualidade é o que garante o sucesso do nosso cliente."),
+    ("clipes_ia/c08_projeto_v1.mov", 0, 5.0, "Ser a parceira mais ágil e assertiva do mercado exige mais do que tecnologia;"),
+    ("clipes_ia/c09_qualidade_v1.mov", 0, 5.0, "exige olhar para cada detalhe com a responsabilidade de quem sabe que a nossa qualidade é o que garante o sucesso do nosso cliente."),
     ("clipes_ia/c10_apresentador_joinha_v1.mov", 0, 5.0, "Na Inova, o padrão 'bom' não basta. Nós entregamos o impecável."),
     ("clipes_ia/c11_boas_vindas_v1.mov", 0, 5.0, "Você entra hoje para um time que valoriza o ser humano acima de tudo."),
-    ("saida/animacao/c12_harmonia.mp4", 0, 5.0, "Acreditamos que grandes resultados são frutos de um ambiente de respeito e harmonia."),
+    ("clipes_ia/c12_harmonia_v1.mov", 0, 5.0, "Acreditamos que grandes resultados são frutos de um ambiente de respeito e harmonia."),
     ("clipes_ia/c14_apontando_v1.mov", 0, 5.0, "Você é o protagonista desta engrenagem. Sua dedicação e o seu capricho mantêm a Inova como referência de confiança e inovação."),
     ("clipes_ia/c15_seguranca_v1.mov", 0, 5.0, "Mas lembre-se: para alcançarmos a excelência externa, precisamos de cuidado interno. Sua segurança é o nosso maior valor."),
     ("clipes_ia/c16_epis_v1.mov", 0, 5.0, "O uso de EPIs, como protetor auricular, óculos e botinas,"),
     ("clipes_ia/c17_faixa_seguranca_v1.mov", 0, 5.0, "e o respeito rigoroso aos procedimentos são o compromisso que você assume consigo mesmo e com seus colegas."),
     ("clipes_ia/c18_cuidado_v1.mov", 0, 5.0, "Na Inova, cuidamos uns dos outros para que todos cresçam juntos."),
     ("clipes_ia/c19_mao_no_peito_v1.mov", 0, 5.0, "Estamos felizes em ter você aqui. Mais do que um colaborador, você é o novo embaixador da nossa qualidade."),
-    ("saida/animacao/c20_caminhada.mp4", 0, 5.0, "Prepare-se para uma jornada onde seu esforço será valorizado e sua evolução será constante."),
+    ("clipes_ia/c20_caminhada_v1.mov", 0, 5.0, "Prepare-se para uma jornada onde seu esforço será valorizado e sua evolução será constante."),
     ("saida/previas/MOV_A_orbita_descendente.mp4", 0, 7.0, "Inova Industrial: mais do que produzir equipamentos, um compromisso com a excelência, com o cliente e com o seu futuro."),
     ("LOGO", 0, 4.0, ""),
 ]
@@ -88,7 +88,7 @@ def main():
         for p in trechos:
             fh.write(f"file '{p}'\n")
     total = sum(t[2] for t in LINHA_DO_TEMPO)
-    saida = os.path.join(RAIZ, "saida", "previa_filme_v1.mp4")
+    saida = os.path.join(RAIZ, "saida", "previa_filme_v2.mp4")
     cmd = ["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", lista,
            "-vf", f"settb=AVTB,setpts=N/24/TB,fps=24,fade=in:st=0:d=0.5,fade=out:st={total - 0.6}:d=0.6",
            "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "20", "-movflags", "+faststart", saida]
