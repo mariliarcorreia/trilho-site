@@ -29,34 +29,29 @@
     {
       "variante": "completa",
       "centro": [
-        236,
-        360
+        359,
+        346
       ],
-      "largura": 46
+      "largura": 36,
+      "opacidade": 0.92
     },
     {
       "variante": "completa",
       "centro": [
-        362,
-        348
+        624,
+        338
       ],
-      "largura": 42
-    },
-    {
-      "variante": "completa",
-      "centro": [
-        662,
-        322
-      ],
-      "largura": 46
+      "largura": 30,
+      "opacidade": 0.92
     },
     {
       "variante": "completa_escura",
       "centro": [
-        962,
-        348
+        912,
+        346
       ],
-      "largura": 46
+      "largura": 34,
+      "opacidade": 0.92
     }
   ],
   "c16_epis": [
