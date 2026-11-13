@@ -1,0 +1,116 @@
+[
+ {
+  "paragrafo": 1,
+  "clipe": "MOV_B_aproximacao_frontal.mp4",
+  "inicio": 3.0,
+  "duracao": 1.78
+ },
+ {
+  "paragrafo": 1,
+  "clipe": "c03_apresentador_v1.mov",
+  "inicio": 4.78,
+  "duracao": 6.35
+ },
+ {
+  "paragrafo": 1,
+  "clipe": "c04_soldador_v1.mov",
+  "inicio": 11.13,
+  "duracao": 4.88
+ },
+ {
+  "paragrafo": 1,
+  "clipe": "c05_frigorifico_v1.mov",
+  "inicio": 16.01,
+  "duracao": 3.45
+ },
+ {
+  "paragrafo": 2,
+  "clipe": "MOV_A_orbita_descendente.mp4",
+  "inicio": 19.47,
+  "duracao": 5.07
+ },
+ {
+  "paragrafo": 2,
+  "clipe": "c07_dedo_levantado_v1.mov",
+  "inicio": 24.54,
+  "duracao": 2.85
+ },
+ {
+  "paragrafo": 2,
+  "clipe": "c08_projeto_v1.mov",
+  "inicio": 27.38,
+  "duracao": 4.78
+ },
+ {
+  "paragrafo": 2,
+  "clipe": "c09_qualidade_v1.mov",
+  "inicio": 32.16,
+  "duracao": 6.88
+ },
+ {
+  "paragrafo": 2,
+  "clipe": "c10_apresentador_joinha_v1.mov",
+  "inicio": 39.05,
+  "duracao": 4.77
+ },
+ {
+  "paragrafo": 3,
+  "clipe": "c11_boas_vindas_v1.mov",
+  "inicio": 43.82,
+  "duracao": 3.82
+ },
+ {
+  "paragrafo": 3,
+  "clipe": "c12_harmonia_v1.mov",
+  "inicio": 47.64,
+  "duracao": 5.16
+ },
+ {
+  "paragrafo": 3,
+  "clipe": "c14_apontando_v1.mov",
+  "inicio": 52.8,
+  "duracao": 9.59
+ },
+ {
+  "paragrafo": 4,
+  "clipe": "c15_seguranca_v1.mov",
+  "inicio": 62.39,
+  "duracao": 7.92
+ },
+ {
+  "paragrafo": 4,
+  "clipe": "c16_epis_v1.mov",
+  "inicio": 70.31,
+  "duracao": 3.94
+ },
+ {
+  "paragrafo": 4,
+  "clipe": "c17_faixa_seguranca_v1.mov",
+  "inicio": 74.25,
+  "duracao": 9.9
+ },
+ {
+  "paragrafo": 4,
+  "clipe": "c18_cuidado_v1.mov",
+  "inicio": 84.15,
+  "duracao": 5.2
+ },
+ {
+  "paragrafo": 5,
+  "clipe": "c19_mao_no_peito_v1.mov",
+  "inicio": 89.35,
+  "duracao": 6.77
+ },
+ {
+  "paragrafo": 5,
+  "clipe": "c20_caminhada_v1.mov",
+  "inicio": 96.12,
+  "duracao": 6.26
+ },
+ {
+  "paragrafo": 6,
+  "clipe": "MOV_A_orbita_descendente.mp4",
+  "inicio": 102.38,
+  "duracao": 7.3
+ }
+]
