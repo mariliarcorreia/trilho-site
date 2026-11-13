@@ -1,11 +1,13 @@
-PACOTE CAPCUT | CENAS DE 10 SEGUNDOS | INOVA INDUSTRIAL
+PACOTE CAPCUT | CENAS LONGAS FEITAS COM 2 VIDEOS DE 5 s | INOVA INDUSTRIAL
 
 COMO FAZER (igual para todas):
 - Video de IA > Quadro-chave > a MESMA imagem nos dois espacos
-- Duracao: 10s | Proporcao: 16:9
-- Cenas do apresentador (1 a 4): Seedance 1.5 Pro (o 2.0 Mini barra o rosto dele)
-- Cenas 5 a 7: pode usar Seedance 2.0 Mini (mais barato); se der erro, 1.5 Pro
-- Confira o custo em creditos antes de gerar
+- Modelo: Seedance 1.5 Pro | Duracao: 5s | Proporcao: 16:9
+  (5s no 1.5 Pro nao gasta credito; confira se aparece 0 antes de gerar)
+- Cenas 1 a 4 (apresentador): gere o MESMO prompt DUAS vezes.
+  Eu junto os dois videos na edicao. Como os dois comecam e terminam
+  na mesma imagem, a emenda fica continua.
+- Cenas 5 a 7: gere UMA vez. Eu emendo com o video que voce ja fez antes.
 
 ==================================================
 1) CENA 3 | arquivo 1_cena03_apresentador.png
