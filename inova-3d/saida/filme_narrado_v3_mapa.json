@@ -1,0 +1,210 @@
+[
+ {
+  "paragrafo": 1,
+  "inicio": 3.0,
+  "duracao": 2.0,
+  "clipe": "MOV_C_travelling_avenida.mp4",
+  "inicio_no_clipe": 3.0,
+  "fechado": false
+ },
+ {
+  "paragrafo": 1,
+  "inicio": 5.0,
+  "duracao": 5.1,
+  "clipe": "c03_apresentador_v1.mov",
+  "inicio_no_clipe": 0.0,
+  "fechado": false
+ },
+ {
+  "paragrafo": 1,
+  "inicio": 10.1,
+  "duracao": 5.1,
+  "clipe": "c04_soldador_v1.mov",
+  "inicio_no_clipe": 0.0,
+  "fechado": false
+ },
+ {
+  "paragrafo": 1,
+  "inicio": 15.2,
+  "duracao": 4.13,
+  "clipe": "c05_frigorifico_v1.mov",
+  "inicio_no_clipe": 0.0,
+  "fechado": false
+ },
+ {
+  "paragrafo": 2,
+  "inicio": 19.33,
+  "duracao": 5.85,
+  "clipe": "MOV_B_aproximacao_frontal.mp4",
+  "inicio_no_clipe": 0.0,
+  "fechado": false
+ },
+ {
+  "paragrafo": 2,
+  "inicio": 25.18,
+  "duracao": 3.45,
+  "clipe": "c07_dedo_levantado_v1.mov",
+  "inicio_no_clipe": 0.0,
+  "fechado": false
+ },
+ {
+  "paragrafo": 2,
+  "inicio": 28.63,
+  "duracao": 5.0,
+  "clipe": "c08_projeto_v1.mov",
+  "inicio_no_clipe": 0.0,
+  "fechado": false
+ },
+ {
+  "paragrafo": 2,
+  "inicio": 33.63,
+  "duracao": 5.1,
+  "clipe": "c09_qualidade_v1.mov",
+  "inicio_no_clipe": 0.0,
+  "fechado": false
+ },
+ {
+  "paragrafo": 2,
+  "inicio": 38.73,
+  "duracao": 3.5,
+  "clipe": "c09_qualidade_v1.mov",
+  "inicio_no_clipe": 1.5,
+  "fechado": true
+ },
+ {
+  "paragrafo": 2,
+  "inicio": 42.23,
+  "duracao": 5.05,
+  "clipe": "c10_apresentador_joinha_v1.mov",
+  "inicio_no_clipe": 0.0,
+  "fechado": false
+ },
+ {
+  "paragrafo": 3,
+  "inicio": 47.28,
+  "duracao": 3.7,
+  "clipe": "c11_boas_vindas_v1.mov",
+  "inicio_no_clipe": 0.0,
+  "fechado": false
+ },
+ {
+  "paragrafo": 3,
+  "inicio": 50.98,
+  "duracao": 4.8,
+  "clipe": "c12_harmonia_v1.mov",
+  "inicio_no_clipe": 0.0,
+  "fechado": false
+ },
+ {
+  "paragrafo": 3,
+  "inicio": 55.78,
+  "duracao": 2.25,
+  "clipe": "c14_apontando_v1.mov",
+  "inicio_no_clipe": 0.2,
+  "fechado": false
+ },
+ {
+  "paragrafo": 3,
+  "inicio": 58.03,
+  "duracao": 2.25,
+  "clipe": "c04_soldador_v1.mov",
+  "inicio_no_clipe": 2.0,
+  "fechado": true
+ },
+ {
+  "paragrafo": 3,
+  "inicio": 60.28,
+  "duracao": 4.62,
+  "clipe": "c08_projeto_v1.mov",
+  "inicio_no_clipe": 0.45,
+  "fechado": true
+ },
+ {
+  "paragrafo": 4,
+  "inicio": 64.89,
+  "duracao": 2.0,
+  "clipe": "c15_seguranca_v1.mov",
+  "inicio_no_clipe": 0.85,
+  "fechado": false
+ },
+ {
+  "paragrafo": 4,
+  "inicio": 66.89,
+  "duracao": 1.8,
+  "clipe": "c07_dedo_levantado_v1.mov",
+  "inicio_no_clipe": 3.3,
+  "fechado": false
+ },
+ {
+  "paragrafo": 4,
+  "inicio": 68.69,
+  "duracao": 3.7,
+  "clipe": "c17_faixa_seguranca_v1.mov",
+  "inicio_no_clipe": 0.0,
+  "fechado": false
+ },
+ {
+  "paragrafo": 4,
+  "inicio": 72.39,
+  "duracao": 5.1,
+  "clipe": "c16_epis_v1.mov",
+  "inicio_no_clipe": 0.0,
+  "fechado": false
+ },
+ {
+  "paragrafo": 4,
+  "inicio": 77.49,
+  "duracao": 4.3,
+  "clipe": "c05_frigorifico_v1.mov",
+  "inicio_no_clipe": 0.3,
+  "fechado": true
+ },
+ {
+  "paragrafo": 4,
+  "inicio": 81.79,
+  "duracao": 2.15,
+  "clipe": "c17_faixa_seguranca_v1.mov",
+  "inicio_no_clipe": 2.95,
+  "fechado": true
+ },
+ {
+  "paragrafo": 4,
+  "inicio": 83.94,
+  "duracao": 4.51,
+  "clipe": "c18_cuidado_v1.mov",
+  "inicio_no_clipe": 0.0,
+  "fechado": false
+ },
+ {
+  "paragrafo": 5,
+  "inicio": 88.46,
+  "duracao": 3.65,
+  "clipe": "c19_mao_no_peito_v1.mov",
+  "inicio_no_clipe": 0.05,
+  "fechado": false
+ },
+ {
+  "paragrafo": 5,
+  "inicio": 92.11,
+  "duracao": 5.1,
+  "clipe": "c20_caminhada_v1.mov",
+  "inicio_no_clipe": 0.0,
+  "fechado": false
+ },
+ {
+  "paragrafo": 5,
+  "inicio": 97.21,
+  "duracao": 3.8,
+  "clipe": "c11_boas_vindas_v1.mov",
+  "inicio_no_clipe": 1.2,
+  "fechado": true
+ },
+ {
+  "paragrafo": 6,
+  "inicio": 101.0,
+  "duracao": 6.68,
+  "clipe": "MOV_A_orbita_descendente.mp4",
+  "inicio_no_clipe": 0.3,
+  "fechado": false
+ }
+]
