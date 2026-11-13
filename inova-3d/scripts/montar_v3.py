@@ -7,6 +7,7 @@ a voz fala.
 
 Uso: python scripts/montar_v3.py
 Saida: saida/filme_narrado_v3.mp4 e saida/filme_narrado_v3_leve.mp4
+Com --sem-legenda: saida/filme_narrado_v3_sem_legenda(_leve).mp4
 """
 import json
 import os
@@ -21,8 +22,9 @@ base.NARR = os.path.join(RAIZ, "audio", "narracao_ia_v2")
 FPS = base.FPS
 INTRO = 3.0
 PAUSA = 0.7
-FINAL = 0.6
+FINAL = 0.1
 LOGO = 4.0
+SEM_LEGENDA = "--sem-legenda" in sys.argv
 DUR_CLIPE = 5.1
 
 C = "clipes_ia/{}_v1.mov".format
@@ -89,8 +91,8 @@ PARAGRAFOS = [
      "legendas": [(0.0, 1.68, "Estamos felizes em ter você aqui."),
                   (2.35, 6.04, "Mais do que um colaborador, você é o novo embaixador da nossa qualidade."),
                   (6.76, 11.64, "Prepare-se para uma jornada onde seu esforço será valorizado e sua evolução será constante.")]},
-    {"planos": [(0.0, "saida/previas/MOV_A_orbita_descendente.mp4", 0.3, False)],
-     "legendas": [(0.0, 5.96, "Inova Industrial: mais do que produzir equipamentos, um compromisso com a excelência, com o cliente e com o seu futuro.")]},
+    {"planos": [(0.0, "saida/previas/MOV_A_orbita_descendente.mp4", 0.0, False)],
+     "legendas": [(0.0, 6.85, "Inova Industrial: mais do que produzir equipamentos, um compromisso com a excelência, com o cliente e com o seu futuro.")]},
 ]
 
 
@@ -155,9 +157,9 @@ def main():
         atrasos.append(f"[{k + 1}:a]adelay={ms}|{ms}[a{k}]")
     mix = ";".join(atrasos) + ";" + "".join(f"[a{k}]" for k in range(len(audios))) + \
         f"amix=inputs={len(audios)}:normalize=0,apad,atrim=0:{total:.3f}[aout]"
-    saida = os.path.join(RAIZ, "saida", "filme_narrado_v3.mp4")
+    saida = os.path.join(RAIZ, "saida", "filme_narrado_v3_sem_legenda.mp4" if SEM_LEGENDA else "filme_narrado_v3.mp4")
     base.rodar(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", lista, *entradas,
-                "-filter_complex", f"[0:v]settb=AVTB,setpts=N/{FPS}/TB,fps={FPS},ass={ass},"
+                "-filter_complex", f"[0:v]settb=AVTB,setpts=N/{FPS}/TB,fps={FPS},{'' if SEM_LEGENDA else f'ass={ass},'}"
                                    f"fade=in:st=0:d=0.5,fade=out:st={total - 0.6:.2f}:d=0.6[v];{mix}",
                 "-map", "[v]", "-map", "[aout]", "-t", f"{total:.3f}",
                 "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "20", "-c:a", "aac", "-b:a", "192k",

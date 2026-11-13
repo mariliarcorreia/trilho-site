@@ -202,9 +202,9 @@
  {
   "paragrafo": 6,
   "inicio": 101.0,
-  "duracao": 6.68,
+  "duracao": 6.99,
   "clipe": "MOV_A_orbita_descendente.mp4",
-  "inicio_no_clipe": 0.3,
+  "inicio_no_clipe": 0.0,
   "fechado": false
  }
 ]
